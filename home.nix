@@ -9,15 +9,25 @@
   imports = [
     ./dotfiles/bash.nix
     #./dotfiles/fastfetch.nix
+    ./dotfiles/ghostty.nix
     ./dotfiles/nvim.nix
+    #./dotfiles/starship.nix
   ];
   
+  fonts.fontconfig.enable = true;
+
   home.packages = with pkgs; [
+    brave
     dropbox
     fastfetch
     ghostty
     obsidian
     spotify
+    #starship
+    vlc
+
+    # Fonts
+    jetbrains-mono
  ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

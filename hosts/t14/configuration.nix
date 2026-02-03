@@ -4,7 +4,7 @@
   imports =
     [
       /etc/nixos/hardware-configuration.nix
-      ./modules/cosmic.nix
+      ../../modules/gnome.nix
       inputs.home-manager.nixosModules.default
     ];
 
@@ -13,7 +13,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # FLAKES
-  nix-settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # HOME-MANAGER
   home-manager = {
@@ -73,12 +73,12 @@
   };
 
   # FONTS
-  fonts = {
-    enableDefaultPackages = true;
-    packages = with pkgs; [
-      jetbrains-mono
-    ];
-  };
+  #fonts = {
+  #  enableDefaultPackages = true;
+  #  packages = with pkgs; [
+  #    jetbrains-mono
+  #  ];
+  #};
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.nekrofrukt = {
@@ -96,9 +96,11 @@
   # SYSTEM PACKAGES
   environment.systemPackages = with pkgs; [
   git
+  gnugrep
   firefox
+  tree
   vim
-  # wget
+  wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

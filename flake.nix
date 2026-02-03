@@ -23,8 +23,8 @@
 	      stable = inputs.nixpkgs_stable.legacyPackages.x86_64-linux;
       };
       modules = [
-        .hosts/t14/configuration.nix
-	      inputs.home-manager.nixosModules.default
+        ./hosts/t14/configuration.nix
+	inputs.home-manager.nixosModules.default
       ];
     };
   };
