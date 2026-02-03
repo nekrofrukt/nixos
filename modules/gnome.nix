@@ -8,8 +8,10 @@
   # X11 WINDOWING SYSTEM
   services.xserver.enable = true;
 
-  # GNOME SHELL EXTENSIONS
+  # GNOME EXTENSIONS
   environment.systemPackages = with pkgs; [
+    gnomeExtensions.appindicator
+    gnomeExtensions.libappindicator.stable
     gnomeExtensions.pop-shell
     gnomeExtensions.space-bar
   ];
