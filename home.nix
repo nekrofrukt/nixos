@@ -26,6 +26,9 @@
     starship
     vlc
 
+    # Languages
+    go
+
     # Fonts
     jetbrains-mono
  ];
