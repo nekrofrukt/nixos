@@ -6,7 +6,7 @@
       # Visuals
       #theme = Catppuccin Mocha
       theme = Firewatch
-      window-padding-x = 4
+      window-padding-x = 10,4
       window-decoration = none
 
       # Font configuration
@@ -15,7 +15,9 @@
       
       # Cursor configuration (not perfect!)
       mouse-hide-while-typing = true
-      shell-integration-features = cursor
+      cursor-style-blink = true
+      #cursor-style = block
+      shell-integration-features = no-cursor
     ";
     force = true;
   };

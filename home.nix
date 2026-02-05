@@ -11,19 +11,19 @@
     #./dotfiles/fastfetch.nix
     ./dotfiles/ghostty.nix
     ./dotfiles/nvim.nix
-    #./dotfiles/starship.nix
+    ./dotfiles/ssh.nix
+    ./dotfiles/starship.nix
   ];
   
-  fonts.fontconfig.enable = true;
-
   home.packages = with pkgs; [
+    _1password-cli
     brave
-    dropbox
+    #dropbox <-- via flatpak
     fastfetch
     ghostty
     obsidian
     spotify
-    #starship
+    starship
     vlc
 
     # Fonts

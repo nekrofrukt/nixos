@@ -72,14 +72,6 @@
     alsa.support32Bit = true;
   };
 
-  # FONTS
-  #fonts = {
-  #  enableDefaultPackages = true;
-  #  packages = with pkgs; [
-  #    jetbrains-mono
-  #  ];
-  #};
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.nekrofrukt = {
     isNormalUser = true;
