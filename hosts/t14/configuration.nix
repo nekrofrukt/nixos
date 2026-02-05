@@ -103,6 +103,7 @@
   git
   gnugrep
   firefox
+  ripgrep
   tree
   vim
   wget

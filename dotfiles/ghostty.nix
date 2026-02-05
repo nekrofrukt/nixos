@@ -7,7 +7,7 @@
       #theme = Catppuccin Mocha
       theme = Firewatch
       window-padding-x = 10,4
-      window-decoration = none
+      #window-decoration = none
 
       # Font configuration
       font-family = JetBrains Mono Medium

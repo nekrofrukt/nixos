@@ -8,7 +8,7 @@
   # IMPORTS
   imports = [
     ./dotfiles/bash.nix
-    #./dotfiles/fastfetch.nix
+    ./dotfiles/fastfetch.nix
     ./dotfiles/ghostty.nix
     ./dotfiles/nvim.nix
     ./dotfiles/ssh.nix

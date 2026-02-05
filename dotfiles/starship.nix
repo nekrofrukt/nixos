@@ -5,7 +5,7 @@
     text = ''
       format = """
       $directory$git_branch$git_status$cmd_duration
-      $character
+      $nix_shell$character
       """
 
       [username]
@@ -19,6 +19,11 @@
       [character]
       success_symbol = "[»](bold green)"
       error_symbol = "[»](bold red)"
+      
+      [nix_shell]
+      disabled = false
+      format = "nix-shell "
+      style = "bold blue"
     '';
     force = true;
   };
