@@ -8,14 +8,18 @@
       inputs.home-manager.nixosModules.default
     ];
 
-  # Bootloader
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # CUSTOM SETTING
 
-  # FLAKES
+  # Swapfile
+  swapDevices = [ {
+    device = "/swapfile";
+    size = 4096; # <-- 4 GB swap
+  } ];
+
+  # Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # HOME-MANAGER
+  # Home-Manager
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
@@ -27,9 +31,15 @@
     };
   };
 
-  # TAILSCALE
+  # Tailscale
   services.tailscale.enable = true;
 
+  # GENERAL SETTINGS
+
+  # Bootloader
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+  
   networking.hostName = "t14";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
