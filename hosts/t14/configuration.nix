@@ -17,15 +17,18 @@
 
   # HOME-MANAGER
   home-manager = {
-      useGlobalPkgs = true;
-      useUserPackages = true;
+    useGlobalPkgs = true;
+    useUserPackages = true;
 
-      extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = { inherit inputs; };
 
-      users = {
-          "nekrofrukt" = import ../../home.nix;
-        };
+    users = {
+      "nekrofrukt" = import ../../home.nix;
     };
+  };
+
+  # TAILSCALE
+  services.tailscale.enable = true;
 
   networking.hostName = "t14";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
