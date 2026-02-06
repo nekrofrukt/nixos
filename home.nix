@@ -10,6 +10,7 @@
     ./dotfiles/bash.nix
     ./dotfiles/fastfetch.nix
     ./dotfiles/ghostty.nix
+    ./dotfiles/lazyvim.nix
     ./dotfiles/nvim.nix
     ./dotfiles/ssh.nix
     ./dotfiles/starship.nix
@@ -28,6 +29,8 @@
 
     # Languages
     go
+    lua
+    python315
 
     # Fonts
     jetbrains-mono
