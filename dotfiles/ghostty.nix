@@ -5,7 +5,8 @@
     text = "
       # Visuals
       #theme = Catppuccin Mocha
-      theme = Firewatch
+      #theme = Firewatch
+      theme = TokyoNight Night
       window-padding-x = 10,4
       #window-decoration = none
 

@@ -19,7 +19,7 @@
   home.packages = with pkgs; [
     _1password-cli
     brave
-    #dropbox <-- via flatpak
+    #dropbox <- via flatpak
     fastfetch
     ghostty
     obsidian

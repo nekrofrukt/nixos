@@ -15,7 +15,7 @@
       update_flake = "sudo nix flake update";
       rebuild_switch = "sudo nixos-rebuild switch --flake .#t14";
       rebuild_switch_impure = "sudo nixos-rebuild switch --flake .#t14 --impure";
-      collect_garbage = "sudo nix-env --delete-generations +5 --profile /nix/var/nix/profiles/system && sudo nix-collect-garbage -d";
+      collect_garbage = "sudo nix-collect-garbage --delete-older-than 7d";
       cd_etc = "cd /etc/nixos/";
       cd_nixos = "cd ~/src/nixos";
     };

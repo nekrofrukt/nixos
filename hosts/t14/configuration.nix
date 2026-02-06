@@ -4,37 +4,10 @@
   imports =
     [
       ./hardware-configuration.nix
+      ../../modules/custom-configuration.nix
       ../../modules/gnome.nix
       inputs.home-manager.nixosModules.default
     ];
-
-  # CUSTOM SETTING
-
-  # Swapfile
-  swapDevices = [ {
-    device = "/swapfile";
-    size = 4096; # <-- 4 GB swap
-  } ];
-
-  # Flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # Home-Manager
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-
-    extraSpecialArgs = { inherit inputs; };
-
-    users = {
-      "nekrofrukt" = import ../../home.nix;
-    };
-  };
-
-  # Tailscale
-  services.tailscale.enable = true;
-
-  # GENERAL SETTINGS
 
   # Bootloader
   boot.loader.systemd-boot.enable = true;
@@ -98,7 +71,7 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # SYSTEM PACKAGES
+  # System pkgs
   environment.systemPackages = with pkgs; [
   git
   gnugrep
