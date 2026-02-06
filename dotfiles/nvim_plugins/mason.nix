@@ -1,6 +1,14 @@
 { config, pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    gopls
+    javascript-typescript-langserver
+    lua-language-server
+    nixd
+    pyright
+  ];
+
   home.file.".config/nvim/lua/plugins/mason.lua" = {
     text = ''
       return {
@@ -16,7 +24,7 @@
 	  config = function()
 	    require("mason").setup()
 	    require("mason-lspconfig").setup({
-	      ensure_installed = { "gopls", "lua_ls", "pyright", "tsserver" },
+	      ensure_installed = {},
 	    })
 	  end,
 	},

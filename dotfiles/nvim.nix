@@ -2,7 +2,6 @@
 
 {
   imports = [
-    #./nvim_plugins/lsp.nix
     ./nvim_plugins/lazyvim.nix
     ./nvim_plugins/mason.nix
   ];
