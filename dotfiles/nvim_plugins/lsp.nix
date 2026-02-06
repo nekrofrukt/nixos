@@ -7,7 +7,7 @@
     lua-language-server
     nixd
     pyright
-  ]
+  ];
 
   home.file.".config/nvim/lua/plugins/lsp.lua" = {
     text = ''
