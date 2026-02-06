@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./nvim_plugins/lsp.nix
+    ./nvim_plugins/lazyvim.nix
+  ];
+
   programs.neovim = {
     enable = true;
 
@@ -45,6 +50,23 @@
         { "hrsh7th/nvim-cmp" },
         { "hrsh7th/cmp-nvim-lsp" },
         { "L3MON4D3/LuaSnip" },  -- snippet engine
+
+	-- CMP setup
+        "hrsh7th/nvim-cmp",
+        opts = function(_, opts)
+          local cmp = require("cmp")
+
+          opts.mapping = cmp.mapping.preset.insert({
+            ["<C-n>"] = cmp.mapping.select_next_item(),
+            ["<C-p>"] = cmp.mapping.select_prev_item(),
+            ["<CR>"] = cmp.mapping.confirm({ select = true }),
+          })
+
+          opts.sources = cmp.config.sources({
+            { name = "nvim_lsp" },
+            { name = "buffer" },
+          })
+        end,
       }
     '';
     force = true;

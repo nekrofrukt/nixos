@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   # Flakes
@@ -12,7 +12,7 @@
     extraSpecialArgs = { inherit inputs; };
 
     users = {
-      "nekrofrukt" = import ../../home.nix;
+      "nekrofrukt" = import ../home.nix;
     };
   };
 
