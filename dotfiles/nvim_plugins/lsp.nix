@@ -9,23 +9,24 @@
     pyright
   ];
 
-  home.file.".config/nvim/lua/plugins/lsp.lua" = {
-    text = ''
-      return {
-        {
-          "neovim/nvim-lspconfig",
-          opts = {
-          servers = {
-          lua_lsp = {},
-	  gopls = {},
-          nixd = {},
-          python-lsp-server = {},
-	  typescript-language-server = {},
-          },
-        },
-      },
-    }
-    '';
-    force = true;
-  };
+  #home.file.".config/nvim/lua/plugins/lsp.lua" = {
+  #  text = ''
+  #    return {
+  #      {
+  #        "neovim/nvim-lspconfig",
+  #        opts = function(_, opts)
+  #          opts.servers = {
+  #            lua_ls = {},
+  #	      gopls = {},
+  #            -- nixd = {},
+  #            pyright = {},
+  #	      tsserver = {},
+  #          }
+  #	  end,
+  #      }
+  #    }
+  # '';
+  #  force = true;
+  #};
 }
+
