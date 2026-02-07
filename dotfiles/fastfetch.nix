@@ -10,30 +10,27 @@
   	},
 	"modules": [
 		"title",
-		"separator",
-		{"type": "custom", "key": "LINUX"},
-		"os",
-		"kernel",
-		"uptime",
 		"break",
-		{"type": "custom", "key": "SOFTWARE"},
-		"de",
-		"packages",
-		"terminal",
-		"shell",
+		//"separator",
+		{"key": "{#31}SYSTEM{#keys}", "type": "custom"},
+		{"key": "OPS", "type": "os"},
+		{"key": "KRN", "type": "kernel"},
 		"break",
-		{"type": "custom", "key": "HARDWARE"},
-		"host",
-		"cpu",
-		"memory",
-		"disk",
-		"uptime",
+
+		{"key": "{#31}SOFTWARE{#keys}", "type": "custom"},
+		{"key": "DSK", "type": "de"},
+		{"key": "PKG", "type": "packages"},
+		{"key": "TER", "type": "terminal"},
+		{"key": "SHL", "type": "shell"},
 		"break",
-		{
-		"key": "Colors",
-		"type": "colors",
-		"symbol": "circle",
-		}
+
+		{"key": "{#31}HARDWARE{#keys}", "type": "custom"},
+		{"key": "HST", "type": "host"},
+		{"key": "CPU", "type": "cpu"},
+		{"key": "RAM", "type": "memory"},
+		{"key": "UPT", "type": "uptime"},
+		"break",
+		{"key": "HEX", "type": "colors", "symbol": "circle",}
 	]
     }
     '';
