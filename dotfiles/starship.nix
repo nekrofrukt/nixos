@@ -22,7 +22,7 @@
       
       [nix_shell]
       disabled = false
-      format = "nix-shell "
+      format = "nix "
       style = "bold blue"
     '';
     force = true;
