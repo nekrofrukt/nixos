@@ -1,5 +1,5 @@
 {
-  description = "My flake";
+  description = "Flake for managing my host configurations.";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -11,21 +11,20 @@
   };
 
   outputs = { nixpkgs, ... } @ inputs:
-  let
-    pkgs = nixpkgs.legacyPackages.x86_64-linux;
-    pkgs_stable = inputs.nixpkgs_stable.legacyPackages.x86_64-linux;
-  in
-  {
-    nixosConfigurations.t14 = nixpkgs.lib.nixosSystem {
-      specialArgs = {
-        inherit inputs;
-	      unstable = nixpkgs.legacyPackages.x86_64-linux;
-	      stable = inputs.nixpkgs_stable.legacyPackages.x86_64-linux;
+ {
+    nixosConfigurations = {
+      t14 = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs;
+	  unstable = nixpkgs.legacyPackages.x86_64-linux;
+	  stable = inputs.nixpkgs_stable.legacyPackages.x86_64-linux;
+        };
+        modules = [
+          ./hosts/t14/configuration.nix
+	  inputs.home-manager.nixosModules.default
+        ];
       };
-      modules = [
-        ./hosts/t14/configuration.nix
-	inputs.home-manager.nixosModules.default
-      ];
+      # Add another host here
     };
   };
 }
