@@ -22,7 +22,6 @@
     gnomeExtensions.pop-shell
     gnomeExtensions.space-bar
     gnomeExtensions.system-monitor
-    #gnomeExtensions.appindicator
   ];
 
   # SESSION VARIABLES
