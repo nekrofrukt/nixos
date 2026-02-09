@@ -10,24 +10,21 @@
 
   # FLATPAK
   services.flatpak.enable = true;
-  
+
   # GNOME SPECIFIC PKGS
-  environment.systemPackages = with pkgs; [
-    
-    # Extensions
+  environment.systemPackages = let
+   ge = pkgs.gnomeExtensions;
+  in with pkgs; [
     gnome-tweaks
+    # Extensions
     gnomeExtensions.app-menu-is-back
     gnomeExtensions.appindicator
     gnomeExtensions.forge
-    gnomeExtensions.pop-shell
+    ge.just-perfection
     gnomeExtensions.space-bar
     gnomeExtensions.system-monitor
+    gnomeExtensions.user-themes
   ];
-
-  # SESSION VARIABLES
-  #environment.sessionVariables = {
-  #  GTK_MODULES = "appindicator";
-  #};
 
   services.gnome.gnome-keyring.enable = true;
 }
