@@ -17,13 +17,13 @@
   in with pkgs; [
     gnome-tweaks
     # Extensions
-    gnomeExtensions.app-menu-is-back
-    gnomeExtensions.appindicator
-    gnomeExtensions.forge
+    ge.app-menu-is-back
+    ge.appindicator
+    ge.forge
     ge.just-perfection
-    gnomeExtensions.space-bar
-    gnomeExtensions.system-monitor
-    gnomeExtensions.user-themes
+    ge.space-bar
+    ge.system-monitor
+    ge.user-themes
   ];
 
   services.gnome.gnome-keyring.enable = true;

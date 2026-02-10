@@ -4,7 +4,6 @@
   home.file.".config/ghostty/config" = {
     text = "
       # Visuals
-      #theme = Catppuccin Mocha
       #theme = Firewatch
       #theme = TokyoNight Night
       theme = Everforest Dark Hard
@@ -16,7 +15,7 @@
       font-family = JetBrains Mono Medium
       font-size = 14
       
-      # Cursor configuration (not perfect!)
+      # Cursor configuration
       mouse-hide-while-typing = true
       cursor-style-blink = true
       #cursor-style = block
