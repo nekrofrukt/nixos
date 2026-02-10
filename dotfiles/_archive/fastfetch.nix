@@ -1,0 +1,40 @@
+{ config, pkgs, ... }:
+
+{
+  home.file.".config/fastfetch/config.jsonc" = {
+    text = ''
+    {
+	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+	"display": {
+		"separator": " "
+  	},
+	"modules": [
+		{"key": "{#36}MU/TH/UR : 180924609{#keys}", "type": "custom"},
+                {"key": "{#36}--------------------{#keys}", "type": "custom"},
+		//"title",
+		//"separator",
+		{"key": "{#31}SYSTEM{#keys}", "type": "custom"},
+		{"key": "OPS", "type": "os"},
+		{"key": "KER", "type": "kernel"},
+                {"key": "AGE", "type": "command", "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"},
+		"break",
+		{"key": "{#31}SOFTWARE{#keys}", "type": "custom"},
+		{"key": "DSK", "type": "de"},
+		{"key": "PKG", "type": "packages"},
+		{"key": "TRM", "type": "terminal"},
+		{"key": "SHL", "type": "shell"},
+		"break",
+		{"key": "{#31}HARDWARE{#keys}", "type": "custom"},
+		{"key": "HST", "type": "host"},
+		{"key": "CPU", "type": "cpu"},
+                {"key": "GPU", "type": "gpu"},
+		{"key": "RAM", "type": "memory"},
+		{"key": "UPT", "type": "uptime"},
+		"break",
+		{"key": "HEX", "type": "colors", "symbol": "circle",}
+	]
+    }
+    '';
+    force = true;
+  };
+}

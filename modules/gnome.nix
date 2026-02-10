@@ -21,6 +21,7 @@
     ge.appindicator
     ge.forge
     ge.just-perfection
+    ge.search-light
     ge.space-bar
     ge.system-monitor
     ge.user-themes
