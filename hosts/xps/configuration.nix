@@ -3,7 +3,6 @@
 let
   stable = import inputs.nixpkgs_stable {
     stdenv.hostPlatform.system = pkgs.stdenv.hostPlatform.system;
-    #system = pkgs.system;
     config.allowUnfree = true;
   };
 in
@@ -20,8 +19,10 @@ in
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  # Stable kernel
+  boot.kernelPackages = stable.linuxPackages;
   
-  networking.hostName = "t14";
+  networking.hostName = "xps";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary

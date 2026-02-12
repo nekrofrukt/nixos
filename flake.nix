@@ -10,21 +10,32 @@
     };
   };
 
-  outputs = { nixpkgs, ... } @ inputs:
- {
+  outputs = { self, nixpkgs, nixpkgs_stable, home-manager, ... } @ inputs:
+  let
+    system = "x86_64-linux";
+  in {
     nixosConfigurations = {
       t14 = nixpkgs.lib.nixosSystem {
-        specialArgs = {
-          inherit inputs;
-	  unstable = nixpkgs.legacyPackages.x86_64-linux;
-	  stable = inputs.nixpkgs_stable.legacyPackages.x86_64-linux;
-        };
-        modules = [
+        inherit system;
+
+        specialArgs = { inherit nixpkgs_stable inputs; };
+        
+	modules = [
           ./hosts/t14/configuration.nix
 	  inputs.home-manager.nixosModules.default
         ];
       };
-      # Add another host here
+
+      xps = nixpkgs.lib.nixosSystem {
+        inherit system;
+
+	specialArgs = { inherit nixpkgs_stable inputs; };
+
+	modules = [
+	  ./hosts/xps/configuration.nix
+	  inputs.home-manager.nixosModules.default
+	];
+      };
     };
   };
 }
