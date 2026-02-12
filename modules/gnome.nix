@@ -32,5 +32,6 @@
     # Themes
     everforest-gtk-theme
     gruvbox-gtk-theme
+    gruvbox-plus-icons
   ];
 }
