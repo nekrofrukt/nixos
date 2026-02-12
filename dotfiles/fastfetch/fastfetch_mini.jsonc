@@ -6,7 +6,7 @@
 		"type": "small",
 		"padding": {
 			"top": 0,
-			"right": 2,
+			"right": 4,
 			"left": 2
 		}
 	},
@@ -21,7 +21,7 @@
 		{"key": "󰒓 ", "type": "kernel"},
 		{"key": "󰨇 ", "type": "de"},
 		{"key": " ", "type": "shell"},
-		{"key": "  ", "type": "cpu"},
+		{"key": " ", "type": "cpu"},
 		{"key": " ", "type": "memory"}
 	]
     }
