@@ -11,11 +11,14 @@
   # FLATPAK
   services.flatpak.enable = true;
 
+  services.gnome.gnome-keyring.enable = true;
+
   # GNOME SPECIFIC PKGS
   environment.systemPackages = let
    ge = pkgs.gnomeExtensions;
   in with pkgs; [
     gnome-tweaks
+
     # Extensions
     ge.app-menu-is-back
     ge.appindicator
@@ -25,7 +28,18 @@
     ge.system-monitor
     ge.user-themes
     ge.vicinae
+
+    # Themes
+    everforest-gtk-theme
+    gruvbox-gtk-theme
   ];
 
-  services.gnome.gnome-keyring.enable = true;
+  ## GTK Themes
+  #gtk = {
+  #  enable = true;
+  #  theme = {
+  #    name = "Gruvbox";
+  #    package = pkgs.gruvbox-gtk-theme;
+  #  };
+  #};
 }
