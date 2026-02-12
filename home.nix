@@ -13,7 +13,7 @@
   ];
   
   home.packages = with pkgs; [
-    _1password-cli
+    _1password-gui
     brave
     #dropbox-cli <- instead of flatpak?
     fastfetch
