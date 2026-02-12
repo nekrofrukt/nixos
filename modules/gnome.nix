@@ -33,13 +33,4 @@
     everforest-gtk-theme
     gruvbox-gtk-theme
   ];
-
-  ## GTK Themes
-  #gtk = {
-  #  enable = true;
-  #  theme = {
-  #    name = "Gruvbox";
-  #    package = pkgs.gruvbox-gtk-theme;
-  #  };
-  #};
 }
