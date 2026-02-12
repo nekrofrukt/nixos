@@ -22,6 +22,7 @@
     # Extensions
     ge.app-menu-is-back
     ge.appindicator
+    ge.blur-my-shell
     ge.forge
     ge.just-perfection
     ge.space-bar
