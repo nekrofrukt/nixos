@@ -35,8 +35,8 @@
  ];
 
   home.file = {
-    ".config/fastfetch/config.jsonc".source = ./dotfiles/fastfetch/fastfetch.jsonc;
-    ".config/fastfetch/minimal.jsonc".source = ./dotfiles/fastfetch/fastfetch_mini.jsonc;
+    ".config/fastfetch/config.jsonc".source = ./dotfiles/fastfetch/default.jsonc;
+    ".config/fastfetch/minimal.jsonc".source = ./dotfiles/fastfetch/minimal.jsonc;
     ".config/ghostty/config".source = ./dotfiles/ghostty;
     ".config/starship.toml".source = ./dotfiles/starship.toml;
   };
