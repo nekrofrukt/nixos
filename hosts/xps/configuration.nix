@@ -19,8 +19,8 @@ in
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  # Stable kernel
-  boot.kernelPackages = stable.linuxPackages;
+  # Stable kernel (faulty code!)
+  #boot.kernelPackages = stable.linuxPackages;
   
   networking.hostName = "xps";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
