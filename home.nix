@@ -21,6 +21,7 @@
     obsidian
     spotify
     starship
+    transmission_4-gtk
     vlc
 
     # Languages
