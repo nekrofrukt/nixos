@@ -14,7 +14,7 @@
 		"break",
 		{"key": "{#33}󰨇 SOFTWARE{#keys}", "type": "custom"},
 		{"key": "├DSK", "type": "de"},
-		//{"key": "├PKG", "type": "packages"},
+		{"key": "├PKG", "type": "packages"},
 		{"key": "├TRM", "type": "terminal"},
 		{"key": "└SHL", "type": "shell"},
 		"break",
@@ -23,8 +23,9 @@
 		{"key": "├CPU", "type": "cpu"},
                 {"key": "├GPU", "type": "gpu"},
 		{"key": "├RAM", "type": "memory"},
+		{"key": "├DSK", "type": "disk"},
 		{"key": "└UPT", "type": "uptime"},
 		"break",
-		{"key": "HEX", "type": "colors", "symbol": "circle",}
+		{"key": "HEX", "type": "colors", "symbol": "circle"}
 	]
     }
