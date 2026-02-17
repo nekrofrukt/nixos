@@ -13,6 +13,13 @@
       fzf
       luajitPackages.luarocks
       wl-clipboard
+
+      # Lang servers
+      gopls
+      javascript-typescript-langserver
+      lua-language-server
+      nixd
+      pyright
     ];
 
     initLua = ''
@@ -28,17 +35,19 @@
   home.file = {
     ".config/nvim/lua/config/lazy.lua".source = ./lazy.lua;
     ".config/nvim/lua/plugins/lualine.lua".source = ./plugins/lualine.lua;
+    ".config/nvim/lua/plugins/colorscheme.lua".source = ./plugins/colorscheme.lua;
+    ".config/nvim/lua/plugins/mason.lua".source = ./plugins/mason.lua;
 
     ".config/nvim/lua/plugins/plugins.lua" = {
     text = ''
       return {
         -- Colorscheme
-	{
-	  "folke/tokyonight.nvim",
-	  config = function()
-	    vim.cmd.colorscheme("tokyonight")
-	  end,
-	},
+	--{
+	--  "folke/tokyonight.nvim",
+	--  config = function()
+	--    vim.cmd.colorscheme("tokyonight")
+	--  end,
+	--},
 
 	-- Treesitter for syntax highlighting and text objects
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
