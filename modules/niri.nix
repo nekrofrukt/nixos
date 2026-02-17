@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   # NIRI, DM, X11 WINDOWING SYSTEM
@@ -10,7 +10,8 @@
   environment.systemPackages = with pkgs; [
     alacritty
     fuzzel
-    mako
+    #mako
+    noctalia-shell
     rofi
     swaybg
     xwayland-satellite

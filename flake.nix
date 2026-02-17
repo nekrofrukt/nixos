@@ -4,10 +4,16 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     nixpkgs_stable.url = "github:nixos/nixpkgs?ref=nixos-24.11";
+    
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    #noctalia = {
+    #  url = "github:noctalia-dev/noctalia-shell";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
   };
 
   outputs = { self, nixpkgs, nixpkgs_stable, home-manager, ... } @ inputs:
@@ -20,21 +26,21 @@
 
         specialArgs = { inherit nixpkgs_stable inputs; };
         
-	modules = [
+	    modules = [
           ./hosts/t14/configuration.nix
-	  inputs.home-manager.nixosModules.default
+	      inputs.home-manager.nixosModules.default
         ];
       };
 
       xps = nixpkgs.lib.nixosSystem {
         inherit system;
 
-	specialArgs = { inherit nixpkgs_stable inputs; };
+	    specialArgs = { inherit nixpkgs_stable inputs; };
 
-	modules = [
-	  ./hosts/xps/configuration.nix
-	  inputs.home-manager.nixosModules.default
-	];
+	    modules = [
+	      ./hosts/xps/configuration.nix
+	      inputs.home-manager.nixosModules.default
+	    ];
       };
     };
   };

@@ -9,12 +9,12 @@ let
 in
 
 {
-  imports =
-    [
+  imports = [
       ./hardware-configuration.nix
       ../../modules/custom-configuration.nix
       ../../modules/gnome.nix
       inputs.home-manager.nixosModules.default
+      #../../modules/niri.nix
     ];
 
   # Bootloader
