@@ -8,7 +8,7 @@
   # IMPORTS
   imports = [
     ./dotfiles/bash.nix
-    ./dotfiles/nvim.nix
+    ./dotfiles/nvim/nvim.nix
     ./dotfiles/ssh.nix
   ];
   
@@ -38,8 +38,8 @@
   home.file = {
     ".config/fastfetch/config.jsonc".source = ./dotfiles/fastfetch/default.jsonc;
     ".config/fastfetch/minimal.jsonc".source = ./dotfiles/fastfetch/minimal.jsonc;
-    ".config/ghostty/config".source = ./dotfiles/ghostty;
-    ".config/starship.toml".source = ./dotfiles/starship.toml;
+    ".config/ghostty/config".source = ./dotfiles/ghostty/default;
+    ".config/starship.toml".source = ./dotfiles/starship/starship.toml;
   };
 
   # Home Manager can also manage your environment variables through

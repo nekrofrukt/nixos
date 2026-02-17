@@ -2,8 +2,8 @@
 
 {
   imports = [
-    ./nvim_plugins/lazyvim.nix
-    ./nvim_plugins/mason.nix
+    #./plugins/lazyvim.nix
+    ./plugins/mason.nix
   ];
 
   programs.neovim = {
@@ -25,7 +25,11 @@
   };
 
   # Plugins
-  home.file.".config/nvim/lua/plugins/plugins.lua" = {
+  home.file = {
+    ".config/nvim/lua/config/lazy.lua".source = ./lazy.lua;
+    ".config/nvim/lua/plugins/lualine.lua".source = ./plugins/lualine.lua;
+
+    ".config/nvim/lua/plugins/plugins.lua" = {
     text = ''
       return {
         -- Colorscheme
@@ -41,7 +45,7 @@
 	{ "nvim-treesitter/nvim-treesitter-textobjects" },
 
 	-- UI enhancements
-        { "nvim-lualine/lualine.nvim" },
+        -- { "nvim-lualine/lualine.nvim" },
         { "nvim-telescope/telescope.nvim" },
         { "nvim-lua/plenary.nvim" },  -- required by telescope
 
@@ -70,5 +74,6 @@
       }
     '';
     force = true;
+    };
   };
 }
