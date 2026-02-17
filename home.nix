@@ -33,6 +33,7 @@
 
     # Fonts
     jetbrains-mono
+    nerd-fonts.jetbrains-mono
  ];
 
   home.file = {

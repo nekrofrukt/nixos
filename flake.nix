@@ -29,6 +29,7 @@
 	    modules = [
           ./hosts/t14/configuration.nix
 	      inputs.home-manager.nixosModules.default
+          #./modules/noctalia.nix
         ];
       };
 

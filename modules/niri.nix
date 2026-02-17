@@ -1,6 +1,10 @@
 { config, pkgs, inputs, ... }:
 
 {
+  imports = [
+    #./noctalia.nix
+  ];
+
   # NIRI, DM, X11 WINDOWING SYSTEM
   programs.niri.enable = true;
   services.displayManager.gdm.enable = true;
@@ -10,15 +14,10 @@
   environment.systemPackages = with pkgs; [
     alacritty
     fuzzel
-    #mako
-    noctalia-shell
+    mako
     rofi
     swaybg
+    waybar
     xwayland-satellite
   ];
-
-  # NOCTILIA DEPENDENCIES
-  hardware.bluetooth.enable = true;
-  services.power-profiles-daemon.enable = true;
-  services.upower.enable = true;
 }

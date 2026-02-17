@@ -4,7 +4,6 @@
   programs.bash = {
     enable = true;
 
-    # LAUNCH STARSHIP
     initExtra = ''
       eval "$(starship init bash)"
     '';
