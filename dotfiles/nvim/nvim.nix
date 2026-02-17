@@ -3,7 +3,7 @@
 {
   imports = [
     #./plugins/lazyvim.nix
-    ./plugins/mason.nix
+    #./plugins/mason.nix
   ];
 
   programs.neovim = {
