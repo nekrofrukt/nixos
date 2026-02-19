@@ -13,11 +13,20 @@
   # NIRI SPECIFIC PKGS
   environment.systemPackages = with pkgs; [
     alacritty
+    blueman
     fuzzel
     mako
-    rofi
+    nmgui
     swaybg
+    swayidle
+    swaylock
     waybar
+    wofi
+    xcursor-themes
     xwayland-satellite
   ];
+
+  # DEPENDENCIES
+  #services.dbus.enable = true; <- probably handeled by NixOS
+  security.polkit.enable = true;
 }

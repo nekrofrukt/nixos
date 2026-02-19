@@ -14,6 +14,7 @@
 		"break",
 		{"key": "{#33}󰨇 SOFTWARE{#keys}", "type": "custom"},
 		{"key": "├DSK", "type": "de"},
+        {"key": "├WNM", "type": "wm"},
 		{"key": "├PKG", "type": "packages"},
 		{"key": "├TRM", "type": "terminal"},
 		{"key": "└SHL", "type": "shell"},
