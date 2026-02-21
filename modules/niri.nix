@@ -13,29 +13,19 @@
   # NIRI SPECIFIC PKGS
   environment.systemPackages = with pkgs; [
     alacritty
-    blueman
-    fuzzel
     mako
     nmgui
     quickshell
-    swaybg
     swayidle
     swaylock
-    waybar
-    wofi
     xcursor-themes
     xwayland-satellite
   ];
 
   # DEPENDENCIES
+  hardware.bluetooth.enable = true;
   #services.dbus.enable = true; <- probably handeled by NixOS
   security.polkit.enable = true;
-
-  # For Transmission
-  #xdg.portal = {
-  #  enable = true;
-  #  wlr.enable = true;
-  #};
 
   # DANK MATERIAL SHELL
   programs.dms-shell = {
