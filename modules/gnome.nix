@@ -15,7 +15,7 @@
 
   # GNOME SPECIFIC PKGS
   environment.systemPackages = let
-   ge = pkgs.gnomeExtensions;
+    ge = pkgs.gnomeExtensions;
   in with pkgs; [
     gnome-tweaks
 
@@ -29,10 +29,5 @@
     ge.system-monitor
     ge.user-themes
     ge.vicinae
-
-    # Themes
-    everforest-gtk-theme
-    gruvbox-gtk-theme
-    gruvbox-plus-icons
   ];
 }

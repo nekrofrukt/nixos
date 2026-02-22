@@ -1,8 +1,8 @@
 # Visuals
 #theme = Firewatch
-#theme = Everforest Dark Hard
-theme = Gruvbox Material Dark
+#theme = Gruvbox Material Dark
 #theme = Aizen Dark
+theme = TokyoNight
 window-padding-x = 10,4
 #window-decoration = none
 background-opacity = 0.95
