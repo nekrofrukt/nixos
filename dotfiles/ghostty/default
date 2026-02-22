@@ -4,7 +4,7 @@
 #theme = Aizen Dark
 theme = TokyoNight
 window-padding-x = 10,4
-#window-decoration = none
+window-decoration = none
 background-opacity = 0.95
 
 # Font configuration
