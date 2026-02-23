@@ -16,9 +16,11 @@
     mako
     nmgui
     quickshell
+    swaybg
     swayidle
     swaylock
     waybar
+    wofi
     xcursor-themes
     xwayland-satellite
   ];
