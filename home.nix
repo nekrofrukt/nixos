@@ -41,7 +41,7 @@
     ".config/fastfetch/minimal.jsonc".source = ./dotfiles/fastfetch/minimal.jsonc;
     ".config/ghostty/config".source = ./dotfiles/ghostty/default;
     ".config/starship.toml".source = ./dotfiles/starship/starship.toml;
-    ".config/gtk-4.0/gtk.css".source = ./dotfiles/gtk-4.0/custom.css;
+    ".config/gtk-4.0/gtk.css".source = ./dotfiles/gtk-4.0/themes/catppuccin-macchiato-gruv.css;
   };
 
   # Home Manager can also manage your environment variables through
