@@ -10,10 +10,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    #noctalia = {
-    #  url = "github:noctalia-dev/noctalia-shell";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
+    elephant.url = "github:abenz1267/elephant";
+    walker = {
+      url = "github:abenz1267/walker";
+      inputs.elephant.follows = "elephant";
+    };
   };
 
   outputs = { self, nixpkgs, nixpkgs_stable, home-manager, ... } @ inputs:
@@ -29,7 +30,6 @@
 	    modules = [
           ./hosts/t14/configuration.nix
 	      inputs.home-manager.nixosModules.default
-          #./modules/noctalia.nix
         ];
       };
 

@@ -8,6 +8,7 @@
     // Choose the order of the modules
     "modules-left": [
         "niri/workspaces",
+        "custom/sep",
         "niri/mode",
         "niri/scratchpad",
         "custom/media",
@@ -19,25 +20,11 @@
     ],
     
     "modules-right": [
-        //"mpd",
-        //"idle_inhibitor",
         //"bluetooth",
-        //"pulseaudio",
-        //"power-profiles-daemon",
-        //"network",
-        "cpu",
-        "custom/sep",
-        "memory",
-        "custom/sep",
-        "disk",
-        "custom/sep",
         "network",
-        "custom/sep",
-        "battery",
-        "custom/sep"
-        //"battery#bat2",
-        //"clock"
-        //"custom/power"
+        "cpu",
+        "memory",
+        "custom/power"
     ],
     // Modules configuration
     "niri/workspaces": {
@@ -45,7 +32,6 @@
         "all-outputs": true,
         "warp-on-scroll": false,
         "format": "{icon}",
-        //"format": "{name}: {icon}",
         "persistent-workspaces": {
             "*": 5
         }
@@ -59,6 +45,7 @@
     //         "focused": "",
     //         "default": ""
     //     }
+
     },
     "niri/window": {
         "max-length": 40,
@@ -84,43 +71,10 @@
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
     },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 5,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
-
+    
     "tray": {
         // "icon-size": 21,
-        "spacing": 10,
+        "spacing": 10
         // "icons": {
         //   "blueman": "bluetooth",
         //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
@@ -139,7 +93,7 @@
     },
     
     "memory": {
-        "format": "RAM {used}GiB"
+        "format": "RAM {used}"
     },
 
     "disk": {
@@ -157,41 +111,19 @@
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
+        "format-plugged": "",
         "format-alt": "{time} {icon}",
         "format-time": "{H}:{M}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
-    "battery#bat2": {
-        "bat": "BAT2"
-    },
-    "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
-    },
+    
     "network": {
-        "format-ethernet": "",
-        "format-wifi": "",
-        "format-disconnected": "Offline ⚠",
+        "format-ethernet": "ETHER",
+        "format-wifi": "RADIO",
+        "format-disconnected": "NO CONNECTION",
         "tooltip-format": "{ifname} via {gwaddr}"
-
-
-        /*// "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "Wifi ({signalStrength}%) ",
-        "format-ethernet": "Wired ", // 
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"*/
     },
 
     "custom/sep": {
@@ -202,46 +134,28 @@
 
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
+        "format": "{volume}% {format_source}",
+        "format-bluetooth": "{volume} ",
+        "format-bluetooth-muted": " ",
         "format-muted": " {format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
         "on-click": "pavucontrol"
-    },
-    "custom/media": {
-        "format": "{icon} {text}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
 
     "custom/power": {
-        "format" : "⏻ ",
+        "format" : "  ",
 		"tooltip": false,
-		"menu": "on-click",
+        "on-click": "wleave --protocol layer-shell",
+        "interval": 0
+		/*"menu": "on-click",
 		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
 		"menu-actions": {
 			"shutdown": "shutdown",
 			"reboot": "reboot",
 			"suspend": "systemctl suspend",
 			"hibernate": "systemctl hibernate"
-		}
-    }
+		}*/
+    },
+
 }

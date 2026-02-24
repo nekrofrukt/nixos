@@ -10,6 +10,7 @@
     ./dotfiles/bash.nix
     ./dotfiles/nvim/nvim.nix
     ./dotfiles/ssh.nix
+    ./dotfiles/walker/walker.nix
   ];
   
   home.packages = with pkgs; [
