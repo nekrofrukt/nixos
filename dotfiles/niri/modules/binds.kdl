@@ -3,8 +3,8 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
-    Ctrl+Space hotkey-overlay-title="Run an Application: wofi" { spawn "wofi" "--show" "drun"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Ctrl+Space hotkey-overlay-title="Run an Application: walker" { spawn "walker"; }
+    Super+Alt+L hotkey-overlay-title="Power" { spawn "~/.config/walker/scripts/walker-power.sh"; }
     Mod+B hotkey-overlay-title="Browser" { spawn "brave"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.

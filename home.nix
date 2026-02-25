@@ -35,6 +35,7 @@
     # Fonts
     jetbrains-mono
     nerd-fonts.jetbrains-mono
+    nerd-fonts.caskaydia-mono
  ];
 
   home.file = {

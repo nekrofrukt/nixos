@@ -23,8 +23,7 @@
         //"bluetooth",
         "network",
         "cpu",
-        "memory",
-        "custom/power"
+        "memory"
     ],
     // Modules configuration
     "niri/workspaces": {

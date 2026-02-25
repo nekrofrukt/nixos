@@ -1,24 +1,22 @@
-// This config is in the KDL format: https://kdl.dev
-// "/-" comments out the following node.
-// Check the wiki for a full description of the configuration:
-// https://yalter.github.io/niri/Configuration:-Introduction
-
-// Input device configuration.
-// Find the full list of options on the wiki:
-// https://yalter.github.io/niri/Configuration:-Input
-
-
 hotkey-overlay {
-    // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
     skip-at-startup
 }
 
-// Uncomment this line to ask the clients to omit their client-side decorations if possible.
-// If the client will specifically ask for CSD, the request will be honored.
-// Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
-// This option will also fix border/focus ring drawing behind some semitransparent windows.
-// After enabling or disabling this, you need to restart the apps for this to take effect.
-prefer-no-csd
+spawn-at-startup "waybar"
+spawn-at-startup "mako"
+spawn-at-startup "wleave" "--service"
+spawn-sh-at-startup "swaybg -i ~/src/nixos/dotfiles/wall/samori01.jpg"
+
+cursor {
+    xcursor-theme "Adwaita"
+    xcursor-size 24
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}
 
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
@@ -33,10 +31,10 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // https://yalter.github.io/niri/Configuration:-Animations
 animations {
     // Uncomment to turn off all animations.
-    // off
+    on
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
-    // slowdown 3.0
+    slowdown 0.4
 }
 
 // Window rules let you adjust behavior for individual windows.
@@ -82,8 +80,6 @@ window-rule {
 }
 
 include "modules/binds.kdl"
-include "modules/cursor.kdl"
 include "modules/input.kdl"
 include "modules/layout.kdl"
-include "modules/spawn.kdl"
 include "modules/outputs.kdl"

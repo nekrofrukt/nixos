@@ -11,21 +11,39 @@
       theme = "custom";
       placeholders."default" = { input = "Search"; list = "Example"; };
       
-      providers.prefixes = [
-        {provider = "websearch"; prefix = "+";}
-        {provider = "providerlist"; prefix = "_";}
-      ];
+      providers = {
+      #  max_results = 20;
 
-      providers.applications = { format = "{name}"; };
+        prefixes = [
+          {provider = "websearch"; prefix = "+";}
+          {provider = "providerlist"; prefix = "_";}
+        ];
+      };
 
-      keybinds.quick_activate = ["F1" "F2" "F3"];
+      keybinds.quick_activate = [ ];
+      #keybinds.quick_activate = ["F1" "F2" "F3" "F4" "F5"];
     };
-    
-    # Check out the default layouts for examples https://github.com/abenz1267/walker/tree/master/resources/themes/default
+
+    themes = {
+      "custom" = {
+        style = builtins.readFile ./themes/custom/style.css;
+        layouts = {
+          layout = builtins.readFile ./themes/custom/layout.xml;
+          item = builtins.readFile ./themes/custom/item.xml;
+          item_providerlist = builtins.readFile ./themes/custom/item_providerlist.xml;
+        };
+      };
+    };
+  };
+}
+
+
+# default config: https://github.com/abenz1267/walker/blob/master/resources/config.toml
+# default layouts https://github.com/abenz1267/walker/tree/master/resources/themes/default
+
+
     #    layouts = {
     #      "layout" = " <!-- xml --> ";
     #      "item_calc" = " <!-- xml --> ";
     #      # other provider layouts
     #    };
-  };
-}

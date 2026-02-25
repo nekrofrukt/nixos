@@ -4,7 +4,7 @@
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-//spawn-at-startup "waybar"
+spawn-at-startup "waybar"
 spawn-at-startup "mako"
 spawn-sh-at-startup "swaybg -i ~/src/nixos/dotfiles/wall/samori01.jpg"
 
