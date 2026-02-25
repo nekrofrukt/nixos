@@ -15,13 +15,10 @@
     blueman
     mako
     nmgui
-    quickshell
     swaybg
     swayidle
     swaylock
     waybar
-    wleave
-    wofi
     xcursor-themes
     xwayland-satellite
   ];
