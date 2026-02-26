@@ -17,7 +17,7 @@
         <property name="orientation">horizontal</property>
         <property name="valign">center</property>
         <property name="halign">center</property>
-        <!-- <property name="height-request">570</property> --> <!-- REMOVE? -->
+        <property name="height-request">570</property>
         <child>
           <object class="GtkBox" id="Box">
             <style>
@@ -63,7 +63,7 @@
                     </style>
                     <property name="label">Waiting for elephant...</property>
                     <property name="hexpand">true</property>
-                    <property name="vexpand">true</property> <!-- was true -->
+                    <property name="vexpand">true</property>
                     <property name="visible">false</property>
                     <property name="valign">0.5</property>
                   </object>
@@ -75,7 +75,7 @@
                     </style>
                     <property name="label">No Results</property>
                     <property name="hexpand">true</property>
-                    <property name="vexpand">true</property> <!-- was true -->
+                    <property name="vexpand">true</property>
                     <property name="valign">0.5</property>
                   </object>
                 </child>
@@ -87,10 +87,10 @@
                     <property name="can_focus">false</property>
                     <property name="overlay-scrolling">true</property>
                     <property name="hexpand">true</property>
-                    <property name="vexpand">true</property> <!-- was true -->
+                    <property name="vexpand">true</property>
                     <property name="max-content-width">500</property>
-                    <property name="min-content-width">300</property>
-                    <property name="max-content-height">570</property> <!-- was 400 -->
+                    <property name="min-content-width">500</property>
+                    <property name="max-content-height">400</property>
                     <property name="propagate-natural-height">true</property>
                     <property name="propagate-natural-width">true</property>
                     <property name="hscrollbar-policy">automatic</property>
@@ -116,41 +116,33 @@
                 </child>
               </object>
             </child>
-
             <child>
-                <object class="GtkRevealer" id="KeybindsRevealer">
-                    <property name="reveal-child">false</property>
-            
-                        <child>
-                            <object class="GtkBox" id="Keybinds">
-                                <property name="hexpand">true</property>
-                                <property name="margin-top">10</property>
-                            <style>
-                                <class name="keybinds"></class>
-                            </style>
-                            <child>
-                                <object class="GtkBox" id="GlobalKeybinds">
-                                    <property name="spacing">10</property>
-                                    <style>
-                                        <class name="global-keybinds"></class>
-                                    </style>
-                                </object>
-                            </child>
-                            <child>
-                                <object class="GtkBox" id="ItemKeybinds">
-                                    <property name="hexpand">true</property>
-                                    <property name="halign">end</property>
-                                    <property name="spacing">10</property>
-                                    <style>
-                                        <class name="item-keybinds"></class>
-                                    </style>
-                                </object>
-                            </child>
-                        </object>
-                    </child>
-                </object>
+              <object class="GtkBox" id="Keybinds">
+                <property name="hexpand">true</property>
+                <property name="margin-top">10</property>
+                <style>
+                  <class name="keybinds"></class>
+                </style>
+                <child>
+                  <object class="GtkBox" id="GlobalKeybinds">
+                    <property name="spacing">10</property>
+                    <style>
+                      <class name="global-keybinds"></class>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox" id="ItemKeybinds">
+                    <property name="hexpand">true</property>
+                    <property name="halign">end</property>
+                    <property name="spacing">10</property>
+                    <style>
+                      <class name="item-keybinds"></class>
+                    </style>
+                  </object>
+                </child>
+              </object>
             </child>
-
             <child>
               <object class="GtkLabel" id="Error">
                 <style>
@@ -160,7 +152,6 @@
                 <property name="visible">false</property>
               </object>
             </child>
-
           </object>
         </child>
       </object>

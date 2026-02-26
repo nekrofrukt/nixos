@@ -23,6 +23,8 @@
 
 * {
   all: unset;
+  font-family: Caskaydia Mono Nerd Font;
+  font-weight: 400;
 }
 
 popover {
@@ -103,7 +105,6 @@ child {
 }
 
 .item-box {
-  font-family: Caskaydia Mono Nerd Font;
   font-size: 16px;
   border-radius: 10px;
   padding: 10px;
