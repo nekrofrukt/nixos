@@ -22,6 +22,8 @@
     "modules-right": [
         //"bluetooth",
         "network",
+        "pulseaudio",
+        "disk",
         "cpu",
         "memory"
     ],
@@ -34,32 +36,24 @@
         "persistent-workspaces": {
             "*": 5
         }
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-
+        /*  "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+         }*/
     },
+
     "niri/window": {
         "max-length": 40,
-        "separate-outputs": false
+        "separate-outputs": false,
+        "tooltip": false
     },
 
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
     "niri/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -72,12 +66,7 @@
     },
     
     "tray": {
-        // "icon-size": 21,
         "spacing": 10
-        // "icons": {
-        //   "blueman": "bluetooth",
-        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
-        // }
     },
 
     "clock": {
@@ -92,13 +81,14 @@
     },
     
     "memory": {
-        "format": "RAM {used}"
+        "format": "RAM {used}",
+        "tooltip-format": "{used}/{total} GiB"
     },
 
     "disk": {
         "interval": 60,
         "path": "/",
-        "format": "DSK {free}"
+        "format": " {used}" /* {free} */
     },
 
     "battery": {
@@ -119,9 +109,9 @@
     },
     
     "network": {
-        "format-ethernet": "ETHER",
-        "format-wifi": "RADIO",
-        "format-disconnected": "NO CONNECTION",
+        "format-ethernet": "󰈀 WIRED",
+        "format-wifi": "󰐻 RADIO",
+        "format-disconnected": "󱡝 DISCONNECTED",
         "tooltip-format": "{ifname} via {gwaddr}"
     },
 
@@ -131,21 +121,43 @@
         "tooltip": false
     },
 
-    "pulseaudio": {
+    /*"pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {format_source}",
-        "format-bluetooth": "{volume} ",
+        "format": "VOL{volume}%",
+        "format-muted": " ",
+        "format-bluetooth": "{volume}%",
         "format-bluetooth-muted": " ",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format-source": "{volume}%",
+        "format-source-muted": " ",
+        "on-click": "pavucontrol"
+    },*/
+
+    "pulseaudio": {
+        "format": "󱄠 {icon}",
+        "format-muted": "󰝟 {icon}",
+        "format-bluetooth": " {icon}",
+        "format-bluetooth-muted": "󰝟 {icon}",
+        "format-source": "{volume}%",
+        "format-source-muted": " ",
+        "format-icons": [
+          "▪▪▪▪▪▪▪▪▪",
+          "▮▪▪▪▪▪▪▪▪",
+          "▮▮▪▪▪▪▪▪▪",
+          "▮▮▮▪▪▪▪▪▪",
+          "▮▮▮▮▪▪▪▪▪",
+          "▮▮▮▮▮▪▪▪▪",
+          "▮▮▮▮▮▮▪▪▪",
+          "▮▮▮▮▮▮▮▪▪",
+          "▮▮▮▮▮▮▮▮▪",
+          "▮▮▮▮▮▮▮▮▮"
+        ],
         "on-click": "pavucontrol"
     },
 
     "custom/power": {
         "format" : "  ",
 		"tooltip": false,
-        "on-click": "wleave --protocol layer-shell",
+        "on-click": "",
         "interval": 0
 		/*"menu": "on-click",
 		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder

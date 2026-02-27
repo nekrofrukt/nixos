@@ -1,18 +1,15 @@
-@define-color bg    #1a1b26; 
-@define-color bg2   #333333;
-@define-color fg    #a9b1d6; 
+@define-color bg    #24292a;
+@define-color bg2   #425849;
+@define-color fg    #608663;
 @define-color blk   #32344a; 
-@define-color red   #f7768e; 
+/**/ @define-color red   #f7768e; 
 @define-color grn   #9ece6a; 
-@define-color ylw   #e0af68; 
-@define-color blu   #7aa2f7; 
-@define-color mag   #ad8ee6; 
-@define-color cyn   #0db9d7; 
-@define-color brblk #444b6a; 
-@define-color white #ffffff;
-
-@define-color ylw2   #b7b980;
-@define-color blu2   #87afb1;
+@define-color ylw   #b7b980;
+@define-color blu   #87afb1;
+/**/ @define-color mag   #ad8ee6; 
+@define-color cyn   #94db94;
+/**/ @define-color brblk #444b6a; 
+@define-color white #ffffff; 
 
 * {
     /*font-family: "JetBrainsMono Nerd Font", monospace;*/
@@ -33,13 +30,13 @@ window#waybar {
     background: transparent;
 }
 #workspaces button.active {
-    color: @blk;
+    color: @bg;
     background-color: @fg;
     border-radius: 0px;
     /*border-bottom: 4px solid @fg;*/
 }
 #workspaces button.empty {
-    color: @brblk;
+    color: @bg2;
 }
 #workspaces button.empty.active {
     color: @blk;
@@ -78,24 +75,23 @@ button:hover {
 }
 
 #pulseaudio {
-    color: @blu2;
-    /*background-color: @blu;
+    color: @grn;
+    background-color: @bg2;
     margin: 8 4 8 4;
-    padding: 2 10 2 10;
-    border-radius: 16px;*/
+    border-radius: 16px;
 }
 
 #disk {
-    color: @fg;
+    color: @blu;
 }
 
 #memory {
-    color: @fg;
+    color: @blu;
     margin-right: 8px;
 }
 
 #cpu {
-    color: @fg;
+    color: @blu;
 }
 
 #network {
