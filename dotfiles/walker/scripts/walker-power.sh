@@ -1,9 +1,9 @@
 items=" Lock\n󰒲 Suspend\n󰈆 Log out\n Reboot\n Shut down"
 output=$(echo -e $items | walker --dmenu -n)
 if [[ "$output" == " Lock" ]]; then
-    swaylock -f
+    swaylock -f -C ~/.config/swaylock/config
 elif [[ "$output" == "󰒲 Suspend" ]]; then
-    swaylock -f &
+    swaylock -f -C ~/.config/swaylock/config &
     sleep 1
     systemctl suspend
 elif [[ "$output" == "󰈆 Log out" ]]; then
