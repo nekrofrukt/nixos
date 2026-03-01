@@ -9,10 +9,15 @@
 
     config = {
       theme = "custom";
-      placeholders."default" = { input = "Search"; list = "Example"; };
+
+      #placeholders."default" = { input = "Search"; list = "No results"; };
       
+      placeholders = {
+        "default" = { input = "Search:"; list = "No results"; };
+        "desktopapplications" = { input = "Search application"; list = "No applications"; };
+      };
+
       providers = {
-      #  max_results = 20;
 
         prefixes = [
           {provider = "websearch"; prefix = "+";}
@@ -36,14 +41,3 @@
     };
   };
 }
-
-
-# default config: https://github.com/abenz1267/walker/blob/master/resources/config.toml
-# default layouts https://github.com/abenz1267/walker/tree/master/resources/themes/default
-
-
-    #    layouts = {
-    #      "layout" = " <!-- xml --> ";
-    #      "item_calc" = " <!-- xml --> ";
-    #      # other provider layouts
-    #    };
