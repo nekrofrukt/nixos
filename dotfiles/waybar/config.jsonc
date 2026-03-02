@@ -8,10 +8,7 @@
     // Choose the order of the modules
     "modules-left": [
         "niri/workspaces",
-        "custom/sep",
         "niri/mode",
-        "niri/scratchpad",
-        "custom/media",
         "niri/window"
     ],
 
@@ -20,14 +17,13 @@
     ],
     
     "modules-right": [
-        //"bluetooth",
         "network",
         "pulseaudio",
         "disk",
         "cpu",
         "memory"
     ],
-    // Modules configuration
+
     "niri/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -51,7 +47,14 @@
     "niri/window": {
         "max-length": 40,
         "separate-outputs": false,
-        "tooltip": false
+        "tooltip": false,
+        "format": "{app_id}",
+        "rewrite": {
+            "com.mitchellh.ghostty": "Ghostty",
+            "brave-browser": "Brave",
+            "org.gnome.Nautilus": "Files",
+            "obsidian": "Obsidian"
+        }
     },
 
     "niri/mode": {
@@ -70,7 +73,7 @@
     },
 
     "clock": {
-        // "timezone": "America/New_York",
+        "timezone": "Europe/Stockholm",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
@@ -111,7 +114,7 @@
     "network": {
         "format-ethernet": "󰈀 WIRED",
         "format-wifi": "󰐻 RADIO",
-        "format-disconnected": "󱡝 DISCONNECTED",
+        "format-disconnected": " OFFLINE",
         "tooltip-format": "{ifname} via {gwaddr}"
     },
 
@@ -120,17 +123,6 @@
         "interval": 0,
         "tooltip": false
     },
-
-    /*"pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "VOL{volume}%",
-        "format-muted": " ",
-        "format-bluetooth": "{volume}%",
-        "format-bluetooth-muted": " ",
-        "format-source": "{volume}%",
-        "format-source-muted": " ",
-        "on-click": "pavucontrol"
-    },*/
 
     "pulseaudio": {
         "format": "󱄠 {icon}",
@@ -152,21 +144,5 @@
           "▮▮▮▮▮▮▮▮▮"
         ],
         "on-click": "pavucontrol"
-    },
-
-    "custom/power": {
-        "format" : "  ",
-		"tooltip": false,
-        "on-click": "",
-        "interval": 0
-		/*"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}*/
-    },
-
+    }
 }

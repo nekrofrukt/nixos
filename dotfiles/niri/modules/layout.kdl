@@ -1,10 +1,16 @@
 prefer-no-csd
 
 layout {
-    gaps 4
+    gaps 8
+    struts {
+        left -4
+        right -4
+        top 0
+        bottom -4
+    }
 
     // never, always, on-overflow
-    center-focused-column "on-overflow"
+    center-focused-column "never"
 
     preset-column-widths {
         proportion 0.33333
@@ -12,18 +18,15 @@ layout {
         proportion 0.66667
     }
 
-    // You can also customize the heights that "switch-preset-window-height" (Mod+Shift+R) toggles between.
-    // preset-window-heights { }
-
     default-column-width { proportion 0.5; }
 
     focus-ring {
-        off
+        on
         width 2
 
-        //active-color "#7fc8ff"
-        active-color "#a9b1d6"
-        //active-color "#7aa2f7"
+        //active-color "#7fc8ff" /* cyn */
+        //active-color "#7aa2f7" /* blu */
+        active-color "#87afb1" /* fg2 */
 
         // Color of the ring on inactive monitors.
         // The focus ring only draws around the active window, so the only place
@@ -48,40 +51,23 @@ layout {
 
     border {
         off
-        width 4
+        width 2
         
-        active-color "#ffc87f"
-        inactive-color "#505050"
+        active-color "#87afb1"
+        inactive-color "transparent"
 
         urgent-color "#9b0000"
 
-        // Gradients can use a few different interpolation color spaces.
-        // For example, this is a pastel rainbow gradient via in="oklch longer hue".
-        //
         // active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
-
         // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
     }
 
     shadow {
-        // Uncomment the next line to enable shadows.
-        // on
+        off
 
         softness 30
         spread 5
         offset x=0 y=5
         color "#0007"
-    }
-
-    // Struts shrink the area occupied by windows, similarly to layer-shell panels.
-    // You can think of them as a kind of outer gaps. They are set in logical pixels.
-    // Left and right struts will cause the next window to the side to always be visible.
-    // Top and bottom struts will simply add outer gaps in addition to the area occupied by
-    // layer-shell panels and regular gaps.
-    struts {
-        // left 64
-        // right 64
-        // top 64
-        // bottom 64
     }
 }

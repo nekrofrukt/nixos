@@ -1,8 +1,9 @@
-@define-color bg    #1a1b26;
+@define-color bg    #111111;
 @define-color bg2   #333333;
-@define-color fg    #a9b1d6;
-@define-color fg2   #87afb1;
+@define-color fg    #9fa3a6; /* bright #e7e7e7 */
+@define-color fg2   #9fa3a6;
 @define-color blk   #32344a;
+@define-color org   #d85f44;
 @define-color red   #f7768e;
 @define-color grn   #9ece6a;
 @define-color ylw   #e0af68;
@@ -16,7 +17,7 @@
     /*font-family: "JetBrainsMono Nerd Font", monospace;*/
     font-family: "Caskaydia Mono Nerd Font", monospace; 
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 window#waybar {
@@ -109,7 +110,7 @@ color: @fg;
 }
 
 #network.ethernet {
-    color: @ylw;
+    color: @org;
 }
 
 #network.wifi {

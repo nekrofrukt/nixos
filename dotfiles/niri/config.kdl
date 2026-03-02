@@ -4,8 +4,7 @@ hotkey-overlay {
 
 spawn-at-startup "waybar"
 spawn-at-startup "mako"
-spawn-at-startup "wleave" "--service"
-spawn-sh-at-startup "swaybg -i ~/src/nixos/dotfiles/wall/samori01.jpg"
+spawn-sh-at-startup "swaybg -i ~/src/nixos/dotfiles/wall/samori04.jpg"
 
 cursor {
     xcursor-theme "Adwaita"
@@ -37,49 +36,8 @@ animations {
     slowdown 0.4
 }
 
-// Window rules let you adjust behavior for individual windows.
-// Find more information on the wiki:
-// https://yalter.github.io/niri/Configuration:-Window-Rules
-
-// Work around WezTerm's initial configure bug
-// by setting an empty default-column-width.
-window-rule {
-    // This regular expression is intentionally made as specific as possible,
-    // since this is the default config, and we want no false positives.
-    // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
-}
-
-// Open the Firefox picture-in-picture player as floating by default.
-window-rule {
-    // This app-id regular expression will work for both:
-    // - host Firefox (app-id is "firefox")
-    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    open-floating true
-}
-
-// Example: block out two password managers from screen capture.
-// (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
-
-    block-out-from "screen-capture"
-
-    // Use this instead if you want them visible on third-party screenshot tools.
-    // block-out-from "screencast"
-}
-
-// Example: enable rounded corners for all windows.
-// (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-    geometry-corner-radius 12
-    clip-to-geometry true
-}
-
 include "modules/binds.kdl"
 include "modules/input.kdl"
 include "modules/layout.kdl"
 include "modules/outputs.kdl"
+include "modules/window-rule.kdl"

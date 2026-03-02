@@ -1,14 +1,19 @@
 { config, pkgs, inputs, ... }:
 
-{
-  imports = [
-    #./walker.nix
-  ];
-
   # NIRI, DM, X11 WINDOWING SYSTEM
   programs.niri.enable = true;
-  services.displayManager.gdm.enable = true;
+  services.displayManager.gdm.enable = false;
   services.xserver.enable = true;
+
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd niri";
+        user = "greeter";
+      };
+    };
+  };
 
   # NIRI SPECIFIC PKGS
   environment.systemPackages = with pkgs; [
