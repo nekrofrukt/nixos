@@ -44,6 +44,7 @@
     ".config/ghostty/config".source = ./dotfiles/ghostty/default;
     ".config/starship.toml".source = ./dotfiles/starship/starship.toml;
     ".config/gtk-4.0/gtk.css".source = ./dotfiles/gtk-4.0/themes/catppuccin-macchiato-gruv.css;
+    ".config/walker/scripts/walker-power.sh".source = ./dotfiles/walker/scripts/walker-power.sh;
   };
 
   # Home Manager can also manage your environment variables through

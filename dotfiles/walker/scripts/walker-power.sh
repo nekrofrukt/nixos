@@ -7,9 +7,9 @@ elif [[ "$output" == "󰒲 | Suspend" ]]; then
     sleep 1
     systemctl suspend
 elif [[ "$output" == "󰈆 | Log out" ]]; then
-    gnome-session-quit --logout --no-prompt
+    niri msg action quit
 elif [[ "$output" == " | Reboot" ]]; then
-    sudo reboot
+    reboot
 elif [[ "$output" == " | Shut down" ]]; then
     sudo shutdown now
 else

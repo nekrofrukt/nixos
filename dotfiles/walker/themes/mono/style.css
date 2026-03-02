@@ -1,16 +1,16 @@
-@define-color window_bg_color #1a1b26;
+@define-color window_bg_color #111111;
 @define-color accent_bg_color #54546d;
-@define-color theme_fg_color #a9b1d6;
+@define-color theme_fg_color #cccccc;
 @define-color error_bg_color #C34043;
 @define-color error_fg_color #DCD7BA;
 
-@define-color fg2   #87afb1; 
 @define-color red   #f7768e; 
 @define-color grn   #9ece6a; 
 @define-color ylw   #e0af68; 
 @define-color blu   #7aa2f7; 
 @define-color mag   #ad8ee6; 
 @define-color cyn   #0db9d7;
+@define-color org   #d85f44;
 
 /* Default Walker:
  
@@ -54,7 +54,7 @@ scrollbar {
   background: @window_bg_color;
   padding: 20px;
   border-radius: 0px; /* 20px */
-  border: 1px solid @fg2;/* darker(@accent_bg_color); */
+  border: 1px solid @theme_fg_color;/* darker(@accent_bg_color); */
 }
 
 .preview-box,
@@ -120,7 +120,7 @@ child {
 /* child:hover .item-box, */
 child:selected .item-box,
 row:selected .item-box {
-  color: @fg2;
+  color: @org;
   /* background: alpha(@accent_bg_color, 0.25); */
 }
 
