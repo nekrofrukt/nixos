@@ -1,4 +1,3 @@
-<!-- prisman pröshek -->
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk" version="4.0"></requires>
@@ -63,7 +62,7 @@
                     </style>
                     <property name="label">Waiting for elephant...</property>
                     <property name="hexpand">true</property>
-                    <property name="vexpand">true</property> <!-- was true -->
+                    <property name="vexpand">false</property> <!-- was true -->
                     <property name="visible">false</property>
                     <property name="valign">0.5</property>
                   </object>
@@ -75,7 +74,7 @@
                     </style>
                     <property name="label">No Results</property>
                     <property name="hexpand">true</property>
-                    <property name="vexpand">true</property> <!-- was true -->
+                    <property name="vexpand">false</property> <!-- was true -->
                     <property name="valign">0.5</property>
                   </object>
                 </child>
@@ -87,7 +86,7 @@
                     <property name="can_focus">false</property>
                     <property name="overlay-scrolling">true</property>
                     <property name="hexpand">true</property>
-                    <property name="vexpand">true</property> <!-- was true -->
+                    <property name="vexpand">false</property> <!-- was true -->
                     <property name="max-content-width">500</property>
                     <property name="min-content-width">300</property>
                     <property name="max-content-height">570</property> <!-- was 400 -->

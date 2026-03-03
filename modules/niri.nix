@@ -21,12 +21,14 @@
   environment.systemPackages = with pkgs; [
     adwaita-icon-theme   
     blueman
+    eog
     gnome-disk-utility
     gnome-text-editor
     gnome-themes-extra
     mako
     nautilus
     nmgui
+    sushi   
     swaybg
     swayidle
     swaylock
