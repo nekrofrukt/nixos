@@ -1,5 +1,9 @@
 { config, pkgs, ... }:
 
+let
+  symLink = path: config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/src/nixos/dotfiles/${path}";
+in
+
 {
   home.username = "nekrofrukt";
   home.homeDirectory = "/home/nekrofrukt";
@@ -36,7 +40,7 @@
     jetbrains-mono
     nerd-fonts.jetbrains-mono
     nerd-fonts.caskaydia-mono
- ];
+  ];
 
   home.file = {
     ".config/fastfetch/config.jsonc".source = ./dotfiles/fastfetch/default.jsonc;
@@ -45,6 +49,11 @@
     ".config/starship.toml".source = ./dotfiles/starship/starship.toml;
     ".config/gtk-4.0/gtk.css".source = ./dotfiles/gtk-4.0/themes/catppuccin-macchiato-gruv.css;
     ".config/walker/scripts/walker-power.sh".source = ./dotfiles/walker/scripts/walker-power.sh;
+
+    # Symlinks
+    ".config/waybar/config.jsonc".source = symLink "waybar/config.jsonc";
+    ".config/waybar/style.css".source = symLink "waybar/style.css";
+        #"${config.home.homeDirectory}/src/nixos/dotfiles/waybar";
   };
 
   # Home Manager can also manage your environment variables through
