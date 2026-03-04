@@ -23,8 +23,6 @@
           {provider = "websearch"; prefix = "+";}
           {provider = "providerlist"; prefix = "_";}
         ];
-
-        path = "false";
       };
 
       keybinds.quick_activate = [ ];
