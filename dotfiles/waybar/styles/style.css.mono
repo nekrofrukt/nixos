@@ -1,9 +1,9 @@
 @define-color bg    #111111;
 @define-color bg2   #333333;
-@define-color fg    #9fa3a6; /* bright #e7e7e7 */
+@define-color fg    #e7e7e7; /* bright #e7e7e7 */
 @define-color fg2   #9fa3a6;
+@define-color acc   #ff964f;
 @define-color blk   #32344a;
-@define-color org   #d85f44;
 @define-color red   #f7768e;
 @define-color grn   #9ece6a;
 @define-color ylw   #e0af68;
@@ -110,7 +110,7 @@ color: @fg;
 }
 
 #network.ethernet {
-    color: @org;
+    color: @acc;
 }
 
 #network.wifi {
