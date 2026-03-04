@@ -9,6 +9,7 @@
 @define-color blu   #7aa2f7;
 @define-color mag   #ad8ee6;
 @define-color cyn   #0db9d7; /* change? */
+@define-color org   #ff9e64;
 @define-color brblk #444b6a; 
 @define-color white #ffffff;
 
@@ -31,17 +32,16 @@ window#waybar {
     background: transparent;
 }
 #workspaces button.active {
-    color: @blk;
-    background-color: @fg;
+    color: @fg2;
+    /*background-color: @fg;*/
     border-radius: 0px;
-    /*border-bottom: 4px solid @fg;*/
 }
 #workspaces button.empty {
     color: @brblk;
 }
 #workspaces button.empty.active {
-    color: @blk;
-    background-color: @fg;
+    color: @fg2;
+    /*background-color: @fg;*/
 }
 
 #workspaces button.urgent {
@@ -49,6 +49,8 @@ window#waybar {
 }
 
 button:hover {
+    margin: 4px 0px 4px 4px;
+    padding: 0px 4px;
     border: none;
     background: @red;
     box-shadow: none;
@@ -84,11 +86,11 @@ button:hover {
 }
 
 #pulseaudio {
-    color: @fg2;
-    /*background-color: @blu;
-    margin: 8 4 8 4;
-    padding: 2 10 2 10;
-    border-radius: 16px;*/
+    color: @fg;
+    /*background-color: @bg2;
+    margin: 4 4 4 4;
+    padding: 4 8 4 8;
+    border-radius: 6px;*/
 }
 
 #disk {
@@ -97,23 +99,32 @@ button:hover {
 
 #memory {
     color: @fg;
-    margin-right: 8px;
+    /*background-color: @bg2;
+    margin-right: 0px;
+    margin: 4 4 4 4;
+    padding: 4 8 4 8;
+    border-radius: 6px;*/
 }
 
 #cpu {
-color: @fg;
+    color: @fg
+    /*background-color: @bg2;
+    margin: 4 4 4 4;
+    padding: 4 8 4 8;
+    border-radius: 6px;*/
 }
 
 #network {
     color: @ylw;
+    margin-right: 8px;
 }
 
 #network.ethernet {
-    color: @ylw;
+    color: @fg2;
 }
 
 #network.wifi {
-    color: @grn;
+    color: @ylw;
 }
 
 #network.disconnected {

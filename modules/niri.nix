@@ -17,7 +17,8 @@
     mako
     nautilus
     nmgui
-    sushi   
+    polkit_gnome # <- auth. gui
+    sushi # <- img quickview
     swaybg
     swayidle
     swaylock

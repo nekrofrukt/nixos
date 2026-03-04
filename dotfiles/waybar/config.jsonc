@@ -1,9 +1,9 @@
 // -*- mode: jsonc -*-
 {
-    "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 36, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
+    "layer": "top",
+    "position": "top", // top|bottom|left|right
+    "height": 36, // to be removed for auto
+    // "width": 1280,
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
@@ -17,11 +17,9 @@
     ],
     
     "modules-right": [
-        "network",
         "pulseaudio",
-        "disk",
-        "cpu",
-        "memory"
+        "memory",
+        "network"
     ],
 
     "niri/workspaces": {
@@ -84,7 +82,7 @@
     },
     
     "memory": {
-        "format": "RAM {used}",
+        "format": "󰍛 {used}",
         "tooltip-format": "{used}/{total} GiB"
     },
 
@@ -112,10 +110,13 @@
     },
     
     "network": {
-        "format-ethernet": "󰈀 WIRED",
-        "format-wifi": "󰐻 RADIO",
-        "format-disconnected": " OFFLINE",
-        "tooltip-format": "{ifname} via {gwaddr}"
+        "format-ethernet": "󰈀 Ethernet",
+        "format-wifi": "{icon} Wifi",
+        "format-disconnected": "󰊠",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-icons": {
+            "wifi": ["󰤟", "󰤥", "󰤨"]
+        }
     },
 
     "custom/sep": {
@@ -125,10 +126,10 @@
     },
 
     "pulseaudio": {
-        "format": "󱄠 {icon}",
-        "format-muted": "󰝟 {icon}",
-        "format-bluetooth": " {icon}",
-        "format-bluetooth-muted": "󰝟 {icon}",
+        "format": "󱄠 {volume}%",
+        "format-muted": "󰝟 {volume}%",
+        "format-bluetooth": " {volume}%",
+        "format-bluetooth-muted": "󰝟 {volume}%",
         "format-source": "{volume}%",
         "format-source-muted": " ",
         "format-icons": [
@@ -142,7 +143,7 @@
           "▮▮▮▮▮▮▮▪▪",
           "▮▮▮▮▮▮▮▮▪",
           "▮▮▮▮▮▮▮▮▮"
-        ],
-        "on-click": "pavucontrol"
+        ]
+        /*"on-click": "pavucontrol"*/
     }
 }
