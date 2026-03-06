@@ -1,5 +1,5 @@
 * {
-  border: 1;
+  border: 0;
   margin: 0;
   padding: 0;
   spacing: 0;
@@ -10,7 +10,7 @@
   bg-alt: #242633;
   fg: #a9b1d6;
   fg-alt: #87afb1;
-  selected: @fg-alt;
+  selected: #e0af68;
   background-color: @bg;
   text-color: @fg;
 
@@ -93,7 +93,7 @@ window {
     padding:                     0px;
     border:                      1px solid;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                @fg-alt;
     cursor:                      "default";
     background-color:            @bg;
 }
