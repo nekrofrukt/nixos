@@ -14,7 +14,7 @@ in
     ./dotfiles/bash.nix
     ./dotfiles/nvim/nvim.nix
     ./dotfiles/ssh.nix
-    ./dotfiles/walker/walker.nix
+    #./dotfiles/walker/walker.nix
   ];
   
   home.packages = with pkgs; [
@@ -36,7 +36,7 @@ in
     typescript
 
     # Fonts
-    jetbrains-mono
+    #jetbrains-mono
     nerd-fonts.jetbrains-mono
     nerd-fonts.caskaydia-mono
   ];
@@ -44,7 +44,8 @@ in
   home.file = {
     ".config/ghostty/config".source = ./dotfiles/ghostty/default;
     ".config/starship.toml".source = ./dotfiles/starship/starship.toml;
-    #".config/gtk-4.0/gtk.css".source = ./dotfiles/gtk-4.0/themes/catppuccin-macchiato-gruv.css;
+    ".config/gtk-4.0/gtk.css".source = ./dotfiles/gtk-4.0/gtk.css;
+    ".config/gtk-4.0/settings.ini".source = ./dotfiles/gtk-4.0/settings.ini;
 
     # Symlinks
     ".config/fastfetch/config.jsonc".source = symLink "fastfetch/default.jsonc";
@@ -52,7 +53,7 @@ in
     ".config/waybar/config.jsonc".source = symLink "waybar/config.jsonc";
     ".config/waybar/style.css".source = symLink "waybar/style.css";
     ".config/mako/config".source = symLink "mako/config";
-    ".config/gtk-4.0".source = symLink "gtk-4.0";
+    ".config/rofi".source = symLink "rofi";
   };
 
   # Home Manager can also manage your environment variables through

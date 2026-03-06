@@ -19,6 +19,7 @@
     "modules-right": [
         "pulseaudio",
         "memory",
+        "disk",
         "network"
     ],
 
@@ -89,7 +90,7 @@
     "disk": {
         "interval": 60,
         "path": "/",
-        "format": " {used}" /* {free} */
+        "format": " {used}" /* {free} */
     },
 
     "battery": {

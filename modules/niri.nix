@@ -18,6 +18,7 @@
     nautilus
     nmgui
     polkit_gnome # <- auth. gui
+    rofi
     sushi # <- img quickview
     swaybg
     swayidle

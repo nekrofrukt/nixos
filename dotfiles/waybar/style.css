@@ -1,5 +1,5 @@
 @define-color bg    #1a1b26;
-@define-color bg2   #333333;
+@define-color bg2   #222222;
 @define-color fg    #a9b1d6;
 @define-color fg2   #87afb1;
 @define-color blk   #32344a;
@@ -32,7 +32,7 @@ window#waybar {
     background: transparent;
 }
 #workspaces button.active {
-    color: @fg2;
+    color: @ylw;
     /*background-color: @fg;*/
     border-radius: 0px;
 }
@@ -40,7 +40,7 @@ window#waybar {
     color: @brblk;
 }
 #workspaces button.empty.active {
-    color: @fg2;
+    color: @ylw;
     /*background-color: @fg;*/
 }
 
@@ -120,7 +120,7 @@ button:hover {
 }
 
 #network.ethernet {
-    color: @fg2;
+    color: @ylw;
 }
 
 #network.wifi {
