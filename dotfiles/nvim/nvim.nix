@@ -1,10 +1,13 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    #./plugins/lazyvim.nix
-    #./plugins/mason.nix
-  ];
+  home.file = {
+    ".config/nvim/lua/config/lazy.lua".source = ./lazy.lua;
+    ".config/nvim/lua/plugins/colors.lua".source = ./plugins/colors.lua;
+    ".config/nvim/lua/plugins/telescope.lua".source = ./plugins/telescope.lua;
+    #".config/nvim/lua/plugins/lsp.lua".source = ./plugins/lsp.lua;
+    #".config/nvim/lua/plugins/treesitter.lua".source = ./plugins/treesitter.lua;
+  };
 
   programs.neovim = {
     enable = true;
@@ -33,61 +36,10 @@
       vim.opt.number = true
       vim.opt.relativenumber = true
       vim.opt.clipboard = "unnamedplus"
+      vim.opt.cursorline = true
+
+      vim.g.mapleader = " "
+      vim.keymap.set("n", "<leader>cd", vim.cmd.Ex)
     '';
-  };
-
-  # Plugins
-  home.file = {
-    ".config/nvim/lua/config/lazy.lua".source = ./lazy.lua;
-    ".config/nvim/lua/plugins/lualine.lua".source = ./plugins/lualine.lua;
-    ".config/nvim/lua/plugins/colorscheme.lua".source = ./plugins/colorscheme.lua;
-    ".config/nvim/lua/plugins/mason.lua".source = ./plugins/mason.lua;
-
-    ".config/nvim/lua/plugins/plugins.lua" = {
-    text = ''
-      return {
-        -- Colorscheme
-	--{
-	--  "folke/tokyonight.nvim",
-	--  config = function()
-	--    vim.cmd.colorscheme("tokyonight")
-	--  end,
-	--},
-
-	-- Treesitter for syntax highlighting and text objects
-	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-	{ "nvim-treesitter/nvim-treesitter-textobjects" },
-
-	-- UI enhancements
-        -- { "nvim-lualine/lualine.nvim" },
-        { "nvim-telescope/telescope.nvim" },
-        { "nvim-lua/plenary.nvim" },  -- required by telescope
-
-        -- LSP & autocomplete
-        { "neovim/nvim-lspconfig" },
-        { "hrsh7th/nvim-cmp" },
-        { "hrsh7th/cmp-nvim-lsp" },
-        { "L3MON4D3/LuaSnip" },  -- snippet engine
-
-	-- CMP setup
-        "hrsh7th/nvim-cmp",
-        opts = function(_, opts)
-          local cmp = require("cmp")
-
-          opts.mapping = cmp.mapping.preset.insert({
-            ["<C-n>"] = cmp.mapping.select_next_item(),
-            ["<C-p>"] = cmp.mapping.select_prev_item(),
-            ["<CR>"] = cmp.mapping.confirm({ select = true }),
-          })
-
-          opts.sources = cmp.config.sources({
-            { name = "nvim_lsp" },
-            { name = "buffer" },
-          })
-        end,
-      }
-    '';
-    force = true;
-    };
   };
 }

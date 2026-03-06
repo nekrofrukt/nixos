@@ -14,14 +14,12 @@
 		"separator": " "
   	},
 	"modules": [
-		{"key": "{#36}MU/TH/UR : 180924609{#keys}", "type": "custom"},
-                {"key": "{#36}--------------------{#keys}", "type": "custom"},
-		//"title",
-		{"key": " ", "type": "os"},
-		{"key": "󰒓 ", "type": "kernel"},
-		{"key": "󰨇 ", "type": "de"},
-		{"key": " ", "type": "shell"},
-		{"key": " ", "type": "cpu"},
-		{"key": " ", "type": "memory"}
+		"title",
+        "break",
+		{"key": "{#35}os{#keys}     ", "type": "os"},
+		{"key": "{#35}kernel{#keys} ", "type": "kernel"},
+		{"key": "{#35}wm{#keys}     ", "type": "wm"},
+		{"key": "{#35}shell{#keys}  ", "type": "shell"},
+		{"key": "{#35}memory{#keys} ", "type": "memory"}
 	]
     }
