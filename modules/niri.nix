@@ -12,6 +12,7 @@
     blueman
     eog
     gnome-disk-utility
+    gnome-software
     gnome-text-editor
     gnome-themes-extra
     mako
