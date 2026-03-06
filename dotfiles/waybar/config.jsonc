@@ -19,7 +19,6 @@
     "modules-right": [
         "pulseaudio",
         "memory",
-        "disk",
         "network"
     ],
 
@@ -79,12 +78,12 @@
     },
     
     "cpu": {
-        "format": "CPU {usage}%",
+        "format": "󰍛 {usage}%",
         "tooltip": false
     },
     
     "memory": {
-        "format": "󰍛 {used}",
+        "format": "RAM {used}GiB",
         "tooltip-format": "{used}/{total} GiB"
     },
 
@@ -112,8 +111,8 @@
     },
     
     "network": {
-        "format-ethernet": "󰈀 Ethernet",
-        "format-wifi": "{icon} Wifi",
+        "format-ethernet": "󰈀",
+        "format-wifi": "{icon}",
         "format-disconnected": "󰊠",
         "tooltip-format": "{ifname} via {gwaddr}",
         "format-icons": {
@@ -130,7 +129,7 @@
     "pulseaudio": {
         "format": "󱄠 {volume}%",
         "format-muted": "󰝟 {volume}%",
-        "format-bluetooth": " {volume}%",
+        "format-bluetooth": "󰂯 {volume}%",
         "format-bluetooth-muted": "󰝟 {volume}%",
         "format-source": "{volume}%",
         "format-source-muted": " ",
