@@ -8,7 +8,7 @@ window-decoration = none
 #background-opacity = 0.95
 
 # Font configuration
-font-family = JetBrainsMono Nerd Font Medium
+font-family = JetBrainsMono Nerd Font
 font-size = 14
       
 # Cursor configuration
