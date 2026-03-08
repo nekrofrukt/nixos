@@ -18,9 +18,8 @@
     mako
     nautilus
     nmgui
-    #polkit_gnome # <- auth. gui
     rofi
-    sushi # <- img quickview
+    sushi
     swaybg
     swayidle
     swaylock

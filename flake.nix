@@ -10,14 +10,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    #elephant.url = "github:abenz1267/elephant";
-    #walker = {
-    #  url = "github:abenz1267/walker";
-    #  inputs.elephant.follows = "elephant";
-    #};
+    oxwm = {
+      url = "github:tonybanters/oxwm";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs_stable, home-manager, ... } @ inputs:
+  outputs = { self, nixpkgs, nixpkgs_stable, home-manager, oxwm, ... } @ inputs:
   let
     system = "x86_64-linux";
   in {
@@ -41,6 +40,18 @@
 	    modules = [
 	      ./hosts/xps/configuration.nix
 	      inputs.home-manager.nixosModules.default
+	    ];
+      };
+
+      nixbook = nixpkgs.lib.nixosSystem {
+        inherit system;
+
+	    specialArgs = { inherit nixpkgs_stable inputs; };
+
+	    modules = [
+	      ./hosts/nixbook/configuration.nix
+	      inputs.home-manager.nixosModules.default
+          oxwm.nixosModules.default
 	    ];
       };
     };
