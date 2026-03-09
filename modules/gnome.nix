@@ -18,6 +18,7 @@
     ge = pkgs.gnomeExtensions;
   in with pkgs; [
     gnome-tweaks
+    rofi
 
     # Extensions
     ge.app-menu-is-back
