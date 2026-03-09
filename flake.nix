@@ -9,14 +9,9 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    oxwm = {
-      url = "github:tonybanters/oxwm";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs_stable, home-manager, oxwm, ... } @ inputs:
+  outputs = { self, nixpkgs, nixpkgs_stable, home-manager, ... } @ inputs:
   let
     system = "x86_64-linux";
   in {
@@ -51,7 +46,6 @@
 	    modules = [
 	      ./hosts/nixbook/configuration.nix
 	      inputs.home-manager.nixosModules.default
-          oxwm.nixosModules.default
 	    ];
       };
     };

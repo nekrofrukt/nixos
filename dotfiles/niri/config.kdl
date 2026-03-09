@@ -2,8 +2,6 @@ hotkey-overlay {
     skip-at-startup
 }
 
-exec-once = /run/current-system/sw/libexec/polkit-gnome-authentication-agent-1
-
 spawn-at-startup "waybar"
 spawn-sh-at-startup "mako --config ~/.config/mako/config"
 spawn-sh-at-startup "swaybg -i ~/src/nixos/dotfiles/wall/samori04.jpg -m fill"

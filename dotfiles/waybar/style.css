@@ -1,5 +1,5 @@
 @define-color bg    #1a1b26;
-@define-color bg2   #222222;
+@define-color bg2   #333333;
 @define-color fg    #a9b1d6;
 @define-color fg2   #87afb1;
 @define-color blk   #32344a;
@@ -57,7 +57,7 @@ button:hover {
 }
 
 #window {
-    padding: 0 0 0 16px;
+    padding: 0px 0px 0px 16px;
 }
 
 #clock,
@@ -73,7 +73,7 @@ button:hover {
 }
 
 #custom-sep {
-    color: @cyn;
+    color: @fg;
 }
 
 #clock {
@@ -88,8 +88,8 @@ button:hover {
 #pulseaudio {
     color: @fg;
     /*background-color: @bg2;
-    margin: 4 4 4 4;
-    padding: 4 8 4 8;
+    margin: 4px 4px 4px 4px;
+    padding: 4px 8px 4px 8px;
     border-radius: 6px;*/
 }
 
@@ -98,7 +98,7 @@ button:hover {
 }
 
 #memory {
-    color: @mag;
+    color: @fg;
     /*background-color: @bg2;
     margin-right: 0px;
     margin: 4px 4px 4px 4px;

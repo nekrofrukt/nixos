@@ -18,19 +18,19 @@
     
     "modules-right": [
         "pulseaudio",
+        "custom/sep",
         "memory",
+        "custom/sep",
+        "disk",
         "network"
     ],
 
     "niri/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
-        "warp-on-scroll": false,
-        "format": "{icon}",
-        "persistent-workspaces": {
-            "*": 5
-        }
-        /*  "format-icons": {
+        "warp-on-scroll": false
+        /*"format": "{icon}",
+          "format-icons": {
             "1": "1",
             "2": "2",
             "3": "3",
@@ -38,7 +38,7 @@
             "5": "5",
             "urgent": "",
             "focused": "",
-            "default": ""
+            "default": ""
          }*/
     },
 
@@ -83,14 +83,14 @@
     },
     
     "memory": {
-        "format": "RAM {used}GiB",
+        "format": "󰍛 {used}GiB",
         "tooltip-format": "{used}/{total} GiB"
     },
 
     "disk": {
+        "format": " {used}",
         "interval": 60,
-        "path": "/",
-        "format": " {used}" /* {free} */
+        "path": "/"
     },
 
     "battery": {
@@ -121,7 +121,7 @@
     },
 
     "custom/sep": {
-        "format": " ",
+        "format": "|",
         "interval": 0,
         "tooltip": false
     },
