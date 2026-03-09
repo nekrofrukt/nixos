@@ -15,11 +15,10 @@
   	},
 	"modules": [
 		"title",
-        "break",
 		{"key": "{#35}os{#keys}     ", "type": "os"},
 		{"key": "{#35}kernel{#keys} ", "type": "kernel"},
 		{"key": "{#35}wm{#keys}     ", "type": "wm"},
 		{"key": "{#35}shell{#keys}  ", "type": "shell"},
 		{"key": "{#35}memory{#keys} ", "type": "memory"}
 	]
-    }
+}

@@ -4,26 +4,35 @@
 		"separator": " "
   	},
 	"modules": [
-		//{"key": "{#34}MU/TH/UR : 180924609{#keys}", "type": "custom"},
-        //{"key": "{#34}--------------------{#keys}", "type": "custom"},
-		{"key": "{#33}┏━━━━━━━━━━━━━━━━━━━━━ 󰒓 System ━━━━━━━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
+		//{"key": "{#37}┏━━━━━━━━━━━━━━━ MU/TH/UR _ 180924609 ━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
+		{"key": "{#37}┏━━━━━━━━━━━━━━━━━━━━━ {#33}󰒓 System{#keys} {#37}━━━━━━━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
 		{"key": "{#33}  OPS :", "type": "os"},
 		{"key": "{#33}  KER :", "type": "kernel"},
         {"key": "{#33}  AGE :", "type": "command", "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"},
-		{"key": "{#33}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛{#keys}", "type": "custom"},
-		{"key": "{#35}┏━━━━━━━━━━━━━━━━━━━━ 󰨇 Software ━━━━━━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
+		{"key": "{#37}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛{#keys}", "type": "custom"},
+
+		{"key": "{#37}┏━━━━━━━━━━━━━━━━━━━━ {#35}󰨇 Software{#keys} {#37}━━━━━━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
 		{"key": "{#35}  DSK :", "type": "de"},
         {"key": "{#35}  WNM :", "type": "wm"},
-		{"key": "{#35}  PKG :", "type": "packages"},
+		//{"key": "{#35}  PKG :", "type": "packages"},
 		{"key": "{#35}  TRM :", "type": "terminal"},
 		{"key": "{#35}  SHL :", "type": "shell"},
-		{"key": "{#35}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛{#keys}", "type": "custom"},
-		{"key": "{#31}┏━━━━━━━━━━━━━━━━━━━━  Hardware ━━━━━━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
+		{"key": "{#37}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛{#keys}", "type": "custom"},
+		{"key": "{#37}┏━━━━━━━━━━━━━━━━━━━━ {#31} Hardware{#keys} {#37}━━━━━━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
 		{"key": "{#31}  HST :", "type": "host"},
 		{"key": "{#31}  CPU :", "type": "cpu"},
 		{"key": "{#31}  RAM :", "type": "memory"},
 		{"key": "{#31}  UPT :", "type": "uptime"},
-		{"key": "{#31}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛{#keys}", "type": "custom"},
-		{"key": "  {#37}HEX{#keys}", "type": "colors", "symbol": "circle"}
+		{"key": "{#37}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛{#keys}", "type": "custom"},
+		{"key": "{#37}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
+		{"key": "  {#37}HEX :{#keys}", "type": "colors", "symbol": "circle"},
+		{"key": "{#37}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛{#keys}", "type": "custom"}
 	]
 }
+/*
+
+		{"key": "{#35}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛{#keys}", "type": "custom"},
+		{"key": "{#31}┏━━━━━━━━━━━━━━━━━━━━  Hardware ━━━━━━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
+┏━━━┓   ┓   ┏   ┛ ┃
+┗━━━┛   ┛   ┗   ┓
+*/
