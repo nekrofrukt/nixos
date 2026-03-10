@@ -28,6 +28,10 @@ in
 
   # Enable networking
   networking.networkmanager.enable = true;
+  hardware.enableRedistributableFirmware = true;
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+    broadcom_sta
+  ];
 
   # Time zone and internationalisation
   time.timeZone = "Europe/Stockholm";
