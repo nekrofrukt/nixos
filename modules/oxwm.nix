@@ -1,17 +1,19 @@
 { config, pkgs, ... }:
 
 {
-  services.displayManager.lightdm.enable = true;
-  services.xserver = {
-    enable = true;
-    windowManager.oxwm.enable = true;
-  };
+  #services.displayManager.lightdm.enable = true;
+  services.xserver.windowManager.oxwm.enable = true;
+  
+  #services.xserver = {
+  #  enable = true;
+    #windowManager.oxwm.enable = true;
+  #};
   
   # X11 WINDOWING SYSTEM
-  #services.xserver.enable = true;
+  services.xserver.enable = true;
 
   # FLATPAK
-  services.flatpak.enable = true;
+  #services.flatpak.enable = true;
 
   #services.gnome.gnome-keyring.enable = true;
 
