@@ -19,6 +19,7 @@ in
   home.packages = with pkgs; [
     _1password-gui
     brave
+    btop-rocm
     fastfetch
     ghostty
     obsidian

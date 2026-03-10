@@ -19,9 +19,9 @@
     "modules-right": [
         "pulseaudio",
         "custom/sep",
-        "memory",
+        "cpu",
         "custom/sep",
-        "disk",
+        "memory",
         "network"
     ],
 
@@ -78,17 +78,17 @@
     },
     
     "cpu": {
-        "format": "󰍛 {usage}%",
+        "format": "󰍛 CPU: {usage}%",
         "tooltip": false
     },
     
     "memory": {
-        "format": "󰍛 {used}GiB",
+        "format": "󰍛 RAM: {used}GiB",
         "tooltip-format": "{used}/{total} GiB"
     },
 
     "disk": {
-        "format": " {used}",
+        "format": " DSK: {used}",
         "interval": 60,
         "path": "/"
     },
