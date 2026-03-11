@@ -14,7 +14,7 @@
 		{"key": "{#37}┏━━━━━━━━━━━━━━━━━━━━ {#35}󰨇 Software{#keys} {#37}━━━━━━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
 		{"key": "{#35}  DSK :", "type": "de"},
         {"key": "{#35}  WNM :", "type": "wm"},
-		//{"key": "{#35}  PKG :", "type": "packages"},
+		{"key": "{#35}  PKG :", "type": "packages"},
 		{"key": "{#35}  TRM :", "type": "terminal"},
 		{"key": "{#35}  SHL :", "type": "shell"},
 		{"key": "{#37}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛{#keys}", "type": "custom"},

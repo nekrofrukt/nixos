@@ -78,12 +78,14 @@
     },
     
     "cpu": {
-        "format": "󰍛 CPU: {usage}%",
+        //"format": "󰍛 CPU: {usage}%",
+        "format": "CPU {usage}%",
         "tooltip": false
     },
     
     "memory": {
-        "format": "󰆓 RAM: {used}GiB",
+        //"format": "󰆓 RAM: {used}GiB",
+        "format": "RAM {used}",
         "tooltip-format": "{used}/{total} GiB"
     },
 
@@ -127,10 +129,14 @@
     },
 
     "pulseaudio": {
-        "format": "󱄠 {volume}%",
-        "format-muted": "󰝟 {volume}%",
-        "format-bluetooth": "󰂯 {volume}%",
-        "format-bluetooth-muted": "󰝟 {volume}%",
+        //"format": "󱄠 {volume}%",
+        //"format-muted": "󰝟 {volume}%",
+        //"format-bluetooth": "󰂯 {volume}%",
+        //"format-bluetooth-muted": "󰝟 {volume}%",
+        "format": "VOL {volume}%",
+        "format-muted": "󰝟 VOL {volume}%",
+        "format-bluetooth": "󰂯 VOL {volume}%",
+        "format-bluetooth-muted": "󰝟 VOL {volume}%",
         "format-source": "{volume}%",
         "format-source-muted": " ",
         "format-icons": [
