@@ -53,7 +53,6 @@ in
     ".config/fastfetch/minimal.jsonc".source = symLink "fastfetch/minimal.jsonc";
     ".config/waybar/config.jsonc".source = symLink "waybar/config.jsonc";
     ".config/waybar/style.css".source = symLink "waybar/style.css";
-    #".config/mako/config".source = symLink "mako/config";
     ".config/rofi".source = symLink "rofi";
   };
 

@@ -82,13 +82,13 @@ in
 
   # System pkgs
   environment.systemPackages = with pkgs; [
-  git
-  gnugrep
-  firefox
-  ripgrep
-  tree
-  vim
-  wget
+    git
+    gnugrep
+    firefox
+    ripgrep
+    tree
+    vim
+    wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
