@@ -31,9 +31,7 @@ in
     # Languages
     go
     lua
-    nodejs_25
     python315
-    typescript
 
     # Fonts
     #jetbrains-mono
