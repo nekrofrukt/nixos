@@ -15,6 +15,8 @@ alias system_upgrade='sudo nala update; sudo nala upgrade'
 alias cd_nixos='cd ~/src/nixos'
 alias debian_switch='home-manager switch -f ~/src/nixos/hosts/debian/home.nix'
 
+alias ff='fastfetch --config ~/.config/fastfetch/minimal.jsonc'
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;

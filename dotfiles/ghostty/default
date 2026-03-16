@@ -1,8 +1,8 @@
 # Visuals
-#theme = Aizen Dark
 theme = TokyoNight
+#theme = Aizen Dark
 window-padding-x = 10,4
-#window-decoration = none
+window-decoration = none
 #background-opacity = 0.75
 
 # Font configuration
@@ -14,3 +14,12 @@ mouse-hide-while-typing = true
 cursor-style-blink = true
 #cursor-style = block
 shell-integration-features = no-cursor
+
+# Binds
+keybind = ctrl+t=new_split:right
+keybind = ctrl+g=new_split:down
+keybind = ctrl+right=goto_split:right
+keybind = ctrl+left=goto_split:left
+keybind = ctrl+up=goto_split:up
+keybind = ctrl+down=goto_split:down
+keybind = ctrl+w=close_surface
