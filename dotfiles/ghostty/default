@@ -5,7 +5,7 @@
 theme = TokyoNight
 window-padding-x = 10,4
 #window-decoration = none
-background-opacity = 0.75
+#background-opacity = 0.75
 
 # Font configuration
 font-family = JetBrainsMono Nerd Font
