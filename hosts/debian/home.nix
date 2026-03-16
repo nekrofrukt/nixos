@@ -12,6 +12,7 @@ in
   imports = [
     ~/src/nixos/dotfiles/nvim/nvim.nix
     ~/src/nixos/dotfiles/ssh/ssh.nix
+    ~/src/nixos/dotfiles/git/git.nix
   ];
 
   home.packages = with pkgs; [

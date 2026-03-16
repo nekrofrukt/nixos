@@ -39,7 +39,7 @@
 		{
         "key": "{#35}  PKG :",
         "type": "packages",
-        "format": "{dpkg} (dpkg), {nix-user} (nixpkgs)"
+        "format": "{dpkg} (dpkg), {nix-user} (nixpkgs), {flatpak-all} (flatpak)"
         },
 		{"key": "{#35}  TRM :", "type": "terminal"},
 		{"key": "{#35}  SHL :", "type": "shell"},
