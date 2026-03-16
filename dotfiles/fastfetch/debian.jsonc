@@ -3,8 +3,29 @@
 	"display": {
 		"separator": " "
   	},
+    "logo": {
+        "type": "auto",
+        "padding": {
+            "top": 2,
+            "bottom": 0,
+            "left": 2,
+            "right": 4
+        }
+    },
+
+    /*"logo": {
+        "position": "top",
+        "type": "file",
+        "source": "~/src/nixos/dotfiles/fastfetch/logo/debian02.txt",
+        "padding": {
+            "top": 0,
+            "bottom": 4,
+            "left": 0,
+            "right": 0
+        }
+    },*/
+
 	"modules": [
-		//{"key": "{#37}┏━━━━━━━━━━━━━━━ MU/TH/UR _ 180924609 ━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
 		{"key": "{#37}┏━━━━━━━━━━━━━━━━━━━━━ {#33}󰒓 System{#keys} {#37}━━━━━━━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
 		{"key": "{#33}  OPS :", "type": "os"},
 		{"key": "{#33}  KER :", "type": "kernel"},

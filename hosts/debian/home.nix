@@ -11,7 +11,7 @@ in
 
   imports = [
     ~/src/nixos/dotfiles/nvim/nvim.nix
-    ~/src/nixos/dotfiles/ssh.nix
+    ~/src/nixos/dotfiles/ssh/ssh.nix
   ];
 
   home.packages = with pkgs; [
@@ -20,6 +20,7 @@ in
   ];
 
   home.file = {
+    ".bashrc".source = ~/src/nixos/dotfiles/bash/bashrc_debian;
     ".config/ghostty/config".source = ~/src/nixos/dotfiles/ghostty/default;
     ".config/starship.toml".source = ~/src/nixos/dotfiles/starship/starship.toml;
     ".config/gtk-4.0/gtk.css".source = ~/src/nixos/dotfiles/gtk-4.0/gtk.css;

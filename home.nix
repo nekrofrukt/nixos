@@ -11,9 +11,9 @@ in
 
   # IMPORTS
   imports = [
-    ./dotfiles/bash.nix
+    ./dotfiles/bash/bash.nix
     ./dotfiles/nvim/nvim.nix
-    ./dotfiles/ssh.nix
+    ./dotfiles/ssh/ssh.nix
   ];
   
   home.packages = with pkgs; [
