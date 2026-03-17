@@ -1,5 +1,3 @@
-// Window rules let you adjust behavior for individual windows.
-// https://yalter.github.io/niri/Configuration:-Window-Rules
 
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
