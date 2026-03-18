@@ -8,12 +8,13 @@ alias btw='echo i use nix on debian btw'
 
 alias ll='ls -l'
 alias la='ls -A'
-alias update='sudo nala update'
-alias upgrade='sudo nala upgrade'
-alias system_upgrade='sudo nala update; sudo nala upgrade'
+alias update='echo -e "\e[1mUpdating package lists and repositories. ~~>\e[0m"; sudo apt update'
+alias upgrade='echo -e "\e[1mUpgrading packages. ~~>\e[0m"; sudo apt upgrade'
+
+alias system_upgrade='echo -e "\e[1mUpdating package lists and upgrading packages. ~~>\e[0m"; sudo apt update; sudo apt upgrade -y'
 
 alias cd_nixos='cd ~/src/nixos'
-alias debian_switch='home-manager switch -f ~/src/nixos/hosts/debian/home.nix'
+alias homeswitch='home-manager switch -f ~/src/nixos/hosts/debian/home.nix'
 
 alias ff='fastfetch --config ~/.config/fastfetch/minimal.jsonc'
 
