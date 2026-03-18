@@ -87,11 +87,11 @@ button:hover {
 
 #pulseaudio {
     color: @fg;
-    background-color: @bg2;
+    /*background-color: @bg2;
     border: 2px solid @blu;
     margin: 4px 4px 4px 4px;
     padding: 4px 8px 4px 8px;
-    border-radius: 1px;
+    border-radius: 1px;*/
 }
 
 #disk {
