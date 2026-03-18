@@ -18,6 +18,7 @@
     
     "modules-right": [
         "pulseaudio",
+        "custom/sep",
         "cpu",
         "custom/sep",
         "memory",
@@ -135,23 +136,11 @@
         //"format-bluetooth-muted": "󰝟 {volume}%",
         "format": "VOL {volume}%",
         "format-muted": "󰝟 VOL {volume}%",
-        "format-bluetooth": "󰂯 {icon} {volume}%",
-        "format-bluetooth-muted": "󰝟 {icon} {volume}%",
+        "format-bluetooth": "󰂯 VOL {volume}%",
+        "format-bluetooth-muted": "󰝟 VOL {volume}%",
         "format-source": "{volume}%",
         "format-source-muted": " ",
         "format-icons": [
-          "░░░░░░░░░░ ",
-          "█░░░░░░░░░",
-          "██░░░░░░░░",
-          "███░░░░░░░",
-          "████░░░░░░",
-          "█████░░░░░",
-          "██████░░░░",
-          "███████░░░",
-          "████████░░",
-          "█████████░"
-        ]
-        /*"format-icons": [
           "▪▪▪▪▪▪▪▪▪",
           "▮▪▪▪▪▪▪▪▪",
           "▮▮▪▪▪▪▪▪▪",
@@ -162,7 +151,7 @@
           "▮▮▮▮▮▮▮▪▪",
           "▮▮▮▮▮▮▮▮▪",
           "▮▮▮▮▮▮▮▮▮"
-        ]*/
+        ]
         /*"on-click": "pavucontrol"*/
     }
 }

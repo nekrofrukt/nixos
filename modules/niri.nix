@@ -10,6 +10,7 @@
   environment.systemPackages = with pkgs; [
     adwaita-icon-theme   
     blueman
+    #dconf-editor
     eog
     gnome-disk-utility
     gnome-software
@@ -23,6 +24,7 @@
     swaybg
     swayidle
     swaylock
+    #thunar
     waybar
     xcursor-themes
     xdg-desktop-portal-gnome
@@ -32,6 +34,12 @@
 
   # FLATPAK
   services.flatpak.enable = true;
+
+  # XFCE CONFIG
+  #services.gvfs.enable = true; # <- this gives the full feature set for thunar
+  #programs.xfconf.enable = true;
+  #programs.dconf.enable = true; # <- add this after environment.systemPackages, otherwise it won't be found
+  #https://discourse.nixos.org/t/changing-thunar-icon-theme/50178/9
 
   # DEPENDENCIES
   hardware.bluetooth.enable = true;

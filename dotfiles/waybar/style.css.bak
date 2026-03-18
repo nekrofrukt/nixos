@@ -8,7 +8,7 @@
 @define-color ylw   #e0af68;
 @define-color blu   #7aa2f7;
 @define-color mag   #ad8ee6;
-@define-color cyn   #0db9d7;
+@define-color cyn   #0db9d7; /* change? */
 @define-color org   #ff9e64;
 @define-color brblk #444b6a; 
 @define-color white #ffffff;
@@ -79,6 +79,7 @@ button:hover {
 
 #clock {
     color: @fg;
+    /*border-bottom: 4px solid @fg;*/
 }
 
 #battery {
@@ -87,11 +88,10 @@ button:hover {
 
 #pulseaudio {
     color: @fg;
-    background-color: @bg2;
-    border: 2px solid @blu;
+    /*background-color: @bg2;
     margin: 4px 4px 4px 4px;
     padding: 4px 8px 4px 8px;
-    border-radius: 1px;
+    border-radius: 6px;*/
 }
 
 #disk {
@@ -100,11 +100,19 @@ button:hover {
 
 #memory {
     color: @fg;
+    /*background-color: @bg2;
+    margin-right: 0px;
+    margin: 4px 4px 4px 4px;
+    padding: 4px 8px 4px 8px;
+    border-radius: 6px;*/
 }
 
 #cpu {
     color: @fg;
-    margin-left: 8px;
+    /*background-color: @bg2;
+    margin: 4px 4px 4px 4px;
+    padding: 4px 8px 4px 8px;
+    border-radius: 6px;*/
 }
 
 #network {
