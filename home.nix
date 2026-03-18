@@ -14,6 +14,7 @@ in
     ./dotfiles/bash/bash.nix
     ./dotfiles/nvim/nvim.nix
     ./dotfiles/ssh/ssh.nix
+    ./dotfiles/git/git.nix
   ];
   
   home.packages = with pkgs; [
@@ -32,6 +33,8 @@ in
     go
     lua
     python315
+    nodejs_25
+    typescript
 
     # Fonts
     #jetbrains-mono
