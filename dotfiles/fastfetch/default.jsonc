@@ -3,6 +3,16 @@
 	"display": {
 		"separator": " "
   	},
+  
+    "logo": {
+    "type": "auto",
+    "padding": {
+        "top": 0,
+        "right": 4,
+        "left": 3
+    }
+},
+
 	"modules": [
 		//{"key": "{#37}┏━━━━━━━━━━━━━━━ MU/TH/UR _ 180924609 ━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
 		{"key": "{#37}┏━━━━━━━━━━━━━━━━━━━━━ {#33}󰒓 System{#keys} {#37}━━━━━━━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
