@@ -13,8 +13,8 @@ alias upgrade='echo -e "\e[1mUpgrading packages. ~~>\e[0m"; sudo apt upgrade'
 
 alias system_upgrade='echo -e "\e[1mUpdating package lists and upgrading packages. ~~>\e[0m"; sudo apt update; sudo apt upgrade -y'
 
-alias cd_nixos='cd ~/src/nixos'
-alias homeswitch='home-manager switch -f ~/src/nixos/hosts/debian/home.nix'
+alias cdnixos='cd ~/src/nixos; git pull'
+alias hmswitch='home-manager switch -f ~/src/nixos/hosts/debian/home.nix'
 
 alias ff='fastfetch --config ~/.config/fastfetch/minimal.jsonc'
 
