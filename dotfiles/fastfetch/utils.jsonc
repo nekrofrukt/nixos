@@ -19,6 +19,7 @@
 		{"key": "{#37}  kernel  : ", "type": "kernel"},
 		{"key": "{#37}  shell   : ", "type": "shell"},
         {"key": "{#37}  memory  : ", "type": "memory"},
+        {"key": "{#37}  disk    : ", "type": "disk"},
         {"key": "{#37}  uptime  : ", "type": "uptime"},
         {"key": "{#37}  hex     : ", "type": "colors", "symbol": "circle"}
 	]
