@@ -1,0 +1,40 @@
+{
+	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+	"display": {
+		"separator": " "
+  	},
+    
+    "logo": {
+        "type": "small",
+        "padding": {
+            "top": 0,
+            "bottom": 0,
+            "left": 2,
+            "right": 2
+        }
+    },
+
+    /*"logo": {
+        "position": "top",
+        "type": "file",
+        "source": "~/src/nixos/dotfiles/fastfetch/logo/debian04.txt",
+        "padding": {
+            "top": 0,
+            "bottom": 4,
+            "left": 0,
+            "right": 0
+        }
+    },*/
+
+	"modules": [
+		{"key": "{#37}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
+		{"key": "{#37}  os    : ", "type": "os"},
+		{"key": "{#37}  krnl  : ", "type": "kernel"},
+		{"key": "{#37}  shel  : ", "type": "shell"},
+		{"key": "{#37}  pkgs  : ", "type": "packages", "format": "{dpkg} dpkg"},
+		{"key": "{#37}  term  : ", "type": "terminal"},
+        {"key": "{#37}  age   : ", "type": "command", "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"},
+		{"key": "{#37}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛{#keys}", "type": "custom"}
+
+	]
+}

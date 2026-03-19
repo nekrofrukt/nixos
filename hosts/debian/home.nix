@@ -30,6 +30,7 @@ in
     # Symlinks
     ".config/fastfetch/config.jsonc".source = symLink "fastfetch/debian.jsonc";
     ".config/fastfetch/minimal.jsonc".source = symLink "fastfetch/minimal.jsonc";
+    ".config/fastfetch/utils.jsonc".source = symLink "fastfetch/utils.jsonc";
     ".config/ghostty/themes/Fotklanen".source = symLink "ghostty/themes/Fotklanen";
   };
 
