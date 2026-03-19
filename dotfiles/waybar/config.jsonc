@@ -18,6 +18,7 @@
     
     "modules-right": [
         "pulseaudio",
+        "custom/sep",
         "cpu",
         "custom/sep",
         "memory",
