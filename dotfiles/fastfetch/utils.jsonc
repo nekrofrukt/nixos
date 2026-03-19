@@ -14,27 +14,12 @@
         }
     },
 
-    /*"logo": {
-        "position": "top",
-        "type": "file",
-        "source": "~/src/nixos/dotfiles/fastfetch/logo/debian04.txt",
-        "padding": {
-            "top": 0,
-            "bottom": 4,
-            "left": 0,
-            "right": 0
-        }
-    },*/
-
 	"modules": [
-		{"key": "{#37}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
-		{"key": "{#37}  os    : ", "type": "os"},
-		{"key": "{#37}  krnl  : ", "type": "kernel"},
-		{"key": "{#37}  shel  : ", "type": "shell"},
-		{"key": "{#37}  pkgs  : ", "type": "packages", "format": "{dpkg} UTILS"},
-		{"key": "{#37}  term  : ", "type": "terminal"},
-        {"key": "{#37}  age   : ", "type": "command", "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"},
-		{"key": "{#37}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛{#keys}", "type": "custom"}
-
+		{"key": "{#37}  system  : ", "type": "os"},
+		{"key": "{#37}  kernel  : ", "type": "kernel"},
+		{"key": "{#37}  shell   : ", "type": "shell"},
+        {"key": "{#37}  memory  : ", "type": "memory"},
+        {"key": "{#37}  uptime  : ", "type": "uptime"},
+        {"key": "{#37}  hex     : ", "type": "colors", "symbol": "circle"}
 	]
 }
