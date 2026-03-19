@@ -104,7 +104,6 @@ button:hover {
 
 #cpu {
     color: @fg;
-    margin-left: 8px;
 }
 
 #network {
