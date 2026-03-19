@@ -23,8 +23,9 @@
       #rebuild_test_xps = "sudo nixos-rebuild test --flake .#xps";
 
       cd_etc = "cd /etc/nixos/";
-      cd_nixos = "cd ~/src/nixos";
+      cdnixos = "cd ~/src/nixos; git pull";
 
+      ff = "fastfetch --config ~/.config/fastfetch/utils.jsonc";
       ff_m = "fastfetch --config ~/.config/fastfetch/minimal.jsonc";
     };
   };
