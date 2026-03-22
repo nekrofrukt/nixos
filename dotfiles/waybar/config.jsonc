@@ -130,10 +130,6 @@
     },
 
     "pulseaudio": {
-        //"format": "󱄠 {volume}%",
-        //"format-muted": "󰝟 {volume}%",
-        //"format-bluetooth": "󰂯 {volume}%",
-        //"format-bluetooth-muted": "󰝟 {volume}%",
         "format": "VOL {volume}%",
         "format-muted": "󰝟 VOL {volume}%",
         "format-bluetooth": "󰂯 {icon} {volume}%",
@@ -141,18 +137,6 @@
         "format-source": "{volume}%",
         "format-source-muted": " ",
         "format-icons": [
-          "░░░░░░░░░░ ",
-          "█░░░░░░░░░",
-          "██░░░░░░░░",
-          "███░░░░░░░",
-          "████░░░░░░",
-          "█████░░░░░",
-          "██████░░░░",
-          "███████░░░",
-          "████████░░",
-          "█████████░"
-        ]
-        /*"format-icons": [
           "▪▪▪▪▪▪▪▪▪",
           "▮▪▪▪▪▪▪▪▪",
           "▮▮▪▪▪▪▪▪▪",
@@ -163,7 +147,7 @@
           "▮▮▮▮▮▮▮▪▪",
           "▮▮▮▮▮▮▮▮▪",
           "▮▮▮▮▮▮▮▮▮"
-        ]*/
+        ]
         /*"on-click": "pavucontrol"*/
     }
 }
