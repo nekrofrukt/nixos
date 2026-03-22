@@ -27,10 +27,10 @@
 
 	"modules": [
 		{"key": "{#37}┏━━━━━━━━━━━━━━━━━━━━━ {#33}󰒓 System{#keys} {#37}━━━━━━━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
-		{"key": "{#33}  OPS :", "type": "os"},
-		{"key": "{#33}  KER :", "type": "kernel"},
-        {"key": "{#33}  AGE :", "type": "command", "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"},
-		{"key": "{#37}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛{#keys}", "type": "custom"},
+		{"key": "{#33}┣ OPS :", "type": "os"},
+		{"key": "{#33}┣ KER :", "type": "kernel"},
+        {"key": "{#33}┣ AGE :", "type": "command", "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"},
+		"break",
 
 		{"key": "{#37}┏━━━━━━━━━━━━━━━━━━━━ {#35}󰨇 Software{#keys} {#37}━━━━━━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
 		{"key": "{#35}  DSK :", "type": "de"},

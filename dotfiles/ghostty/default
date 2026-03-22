@@ -3,7 +3,7 @@ theme = TokyoNight
 theme = Fotklanen
 #theme = Aizen Dark
 window-padding-x = 10,4
-window-decoration = none
+#window-decoration = none
 #background-opacity = 0.75
 
 # Font configuration
