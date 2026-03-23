@@ -26,32 +26,29 @@
     },*/
 
 	"modules": [
-		{"key": "{#37}┏━━━━━━━━━━━━━━━━━━━━━ {#33}󰒓 System{#keys} {#37}━━━━━━━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
-		{"key": "{#33}┣ OPS :", "type": "os"},
-		{"key": "{#33}┣ KER :", "type": "kernel"},
-        {"key": "{#33}┣ AGE :", "type": "command", "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"},
-		"break",
-
-		{"key": "{#37}┏━━━━━━━━━━━━━━━━━━━━ {#35}󰨇 Software{#keys} {#37}━━━━━━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
-		{"key": "{#35}  DSK :", "type": "de"},
-        {"key": "{#35}  WNM :", "type": "wm"},
+		{"key": "{#37}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
+        "break",
+		{"key": "{#36}  OPS :", "type": "os"},
+		{"key": "{#36}  KER :", "type": "kernel"},
+        {"key": "{#36}  AGE :", "type": "command", "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"},
+        "break",
+		{"key": "{#36}  DSK :", "type": "de"},
+        {"key": "{#36}  WNM :", "type": "wm"},
 		//{"key": "{#35}  PKG :", "type": "packages"},
 		{
-        "key": "{#35}  PKG :",
+        "key": "{#36}  PKG :",
         "type": "packages",
         "format": "{dpkg} (dpkg), {nix-user} (nixpkgs), {flatpak-all} (flatpak)"
         },
-		{"key": "{#35}  TRM :", "type": "terminal"},
-		{"key": "{#35}  SHL :", "type": "shell"},
+		{"key": "{#36}  TRM :", "type": "terminal"},
+		{"key": "{#36}  SHL :", "type": "shell"},
+        "break",
+		{"key": "{#36}  HST :", "type": "host"},
+		{"key": "{#36}  CPU :", "type": "cpu"},
+		{"key": "{#36}  RAM :", "type": "memory"},
+		{"key": "{#36}  UPT :", "type": "uptime"},
+        "break",
 		{"key": "{#37}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛{#keys}", "type": "custom"},
-		{"key": "{#37}┏━━━━━━━━━━━━━━━━━━━━ {#31} Hardware{#keys} {#37}━━━━━━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
-		{"key": "{#31}  HST :", "type": "host"},
-		{"key": "{#31}  CPU :", "type": "cpu"},
-		{"key": "{#31}  RAM :", "type": "memory"},
-		{"key": "{#31}  UPT :", "type": "uptime"},
-		{"key": "{#37}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛{#keys}", "type": "custom"},
-		{"key": "{#37}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
-		{"key": "  {#37}HEX :{#keys}", "type": "colors", "symbol": "circle"},
-		{"key": "{#37}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛{#keys}", "type": "custom"}
+		{"key": "                 {#37}HEX :{#keys}", "type": "colors", "symbol": "circle"}
 	]
 }
