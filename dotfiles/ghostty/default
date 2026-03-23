@@ -8,7 +8,8 @@ window-padding-x = 10,4
 
 # Font configuration
 font-family = JetBrainsMono Nerd Font
-font-size = 14
+#font-size = 14
+font-size = 12
       
 # Cursor configuration
 mouse-hide-while-typing = true
