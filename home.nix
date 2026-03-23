@@ -24,6 +24,7 @@ in
     fastfetch
     ghostty
     obsidian
+    ranger
     spotify
     starship
     transmission_4-qt
