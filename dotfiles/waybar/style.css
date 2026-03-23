@@ -33,7 +33,7 @@ window#waybar {
     background: transparent;
 }
 #workspaces button.active {
-    color: @ylw;
+    color: @blu;
     /*background-color: @fg;*/
     border-radius: 0px;
 }
@@ -41,7 +41,7 @@ window#waybar {
     color: @brblk;
 }
 #workspaces button.empty.active {
-    color: @ylw;
+    color: @blu;
     /*background-color: @fg;*/
 }
 
