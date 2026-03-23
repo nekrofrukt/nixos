@@ -74,7 +74,7 @@
     "clock": {
         "timezone": "Europe/Stockholm",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "[ {:%H:%M} ]",
+        "format": "{:%H:%M}",
         "format-alt": "[ {:%Y-%m-%d} ]"
     },
     
@@ -85,7 +85,7 @@
     },
     
     "memory": {
-        //"format": "󰆓 RAM: {used}GiB",
+        /*"format": "󰆓 RAM {used}",*/
         "format": "RAM {used}",
         "tooltip-format": "{used}/{total} GiB"
     },
@@ -132,8 +132,8 @@
     "pulseaudio": {
         "format": "VOL {volume}%",
         "format-muted": "󰝟 VOL {volume}%",
-        "format-bluetooth": "󰂯 {icon} {volume}%",
-        "format-bluetooth-muted": "󰝟 {icon} {volume}%",
+        "format-bluetooth": "󰂯 VOL {volume}%",
+        "format-bluetooth-muted": "󰝟 VOL {volume}%",
         "format-source": "{volume}%",
         "format-source-muted": " ",
         "format-icons": [
