@@ -6,7 +6,7 @@
     "logo": {
         "type": "auto",
         "padding": {
-            "top": 2,
+            "top": 1,
             "bottom": 0,
             "left": 2,
             "right": 4
