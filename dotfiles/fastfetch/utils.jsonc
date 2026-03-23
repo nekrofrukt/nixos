@@ -21,6 +21,5 @@
         {"key": "{#37}  memory  : ", "type": "memory"},
         {"key": "{#37}  disk    : ", "type": "disk"},
         {"key": "{#37}  uptime  : ", "type": "uptime"},
-        {"key": "{#37}  hex     : ", "type": "colors", "symbol": "circle"}
 	]
 }
