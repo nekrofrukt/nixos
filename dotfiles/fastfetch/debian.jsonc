@@ -14,7 +14,8 @@
     },
 
 	"modules": [
-		//{"key": "{#37}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓{#keys}", "type": "custom"},
+		{"key": "{#37}:: we are all none :.{#keys}", "type": "custom"},
+        "break",
 		{"key": "{#36}┏󰒓 SYSTEM", "type": "custom"},
 		{"key": "{#36}┣OPS :", "type": "os"},
 		{"key": "{#36}┣KER :", "type": "kernel"},
@@ -22,6 +23,7 @@
         "break",
 		{"key": "{#36}┏󰨇 SOFTWARE", "type": "custom"},
 		{"key": "{#36}┣DSK :", "type": "de"},
+		{"key": "{#36}┣WNM :", "type": "wm"},
 		{"key": "{#36}┣PKG :", "type": "packages", "format": "{dpkg} (dpkg), {nix-user} (nixpkgs), {flatpak-all} (flatpak)"},
 		{"key": "{#36}┣TRM :", "type": "terminal"},
 		{"key": "{#36}┗SHL :", "type": "shell"},
