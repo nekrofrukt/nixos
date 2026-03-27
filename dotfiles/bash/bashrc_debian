@@ -10,9 +10,9 @@ alias ll='ls -l'
 alias la='ls -A'
 
 # System maintenance
-alias update='echo -e "\e[1mUpdating package lists and repositories. ~~>\e[0m"; sudo apt update'
-alias upgrade='echo -e "\e[1mUpgrading packages. ~~>\e[0m"; sudo apt upgrade'
-alias system_upgrade='echo -e "\e[1mUpdating package lists and upgrading packages. ~~>\e[0m"; sudo apt update; sudo apt upgrade -y'
+alias update='echo -e "\e[1mUpdating package lists and repositories.\e[0m"; sudo apt update'
+alias upgrade='sudo apt upgrade'
+alias system_upgrade='echo -e "\e[1mUpdating package lists and upgrading packages.\e[0m"; sudo apt update; sudo apt upgrade -y'
 
 # Nix
 alias cdnixos='cd ~/src/nixos; echo -e "\e[1mUpdating repository.\e[0m"; git pull'

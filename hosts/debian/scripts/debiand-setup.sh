@@ -16,14 +16,14 @@ echo -e "\e[1mKeyboard delay set to '200'.\e[0m"
 echo -e "\e[1mKeyboard repeat-interval set to '30'.\e[0m"
 echo -e "\e[1m---\e[0m"
 
-echo -e "\e[1mInstalling utils. ~~>\e[0m"
+echo -e "\e[1mInstalling utils.\e[0m"
 
 # BASE UTILS
 sudo apt update
 sudo apt install -y git curl wget lsb-release
 
 # REPOSITORIES
-echo -e "\e[1mAdding repositories. ~~>\e[0m"
+echo -e "\e[1mAdding repositories.\e[0m"
 
 # 1password
 curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg
@@ -56,13 +56,16 @@ sh <(wget -qO - https://downloads.nordcdn.com/apps/linux/install.sh) -p nordvpn-
 curl -fsSL https://tailscale.com/install.sh | sh
 
 # Packages
-echo -e "\e[1mInstalling packages. ~~>\e[0m"
+echo -e "\e[1mInstalling packages.\e[0m"
 
 sudo apt update
-sudo apt install -y 1password brave-browser ghostty flatpak gnome-software-plugin-flatpak /tmp/dropbox.deb ripgrep tree starship fastfetch nordvpn spotify-client vlc btop transmission ranger
+sudo apt install -y 1password brave-browser ghostty flatpak gnome-software-plugin-flatpak /tmp/dropbox.deb ripgrep ufw tree starship fastfetch nordvpn spotify-client vlc btop transmission ranger
+
+echo -e "\e[1mEnabling firewall.\e[0m"
+sudo ufw enable
 
 # Flatpak
-echo -e "\e[1mSetting up Flatpak repository. ~~>\e[0m"
+echo -e "\e[1mSetting up Flatpak repository.\e[0m"
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 echo -e "\e[1mInstallation complete!\e[0m"
