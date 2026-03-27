@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo -e "\e[1mPulling updates from git. ~~>\e[0m"
+
+cd ~/src/nixos || exit 1
+git pull
