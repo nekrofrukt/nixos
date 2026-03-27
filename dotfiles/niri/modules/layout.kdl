@@ -1,7 +1,7 @@
 prefer-no-csd
 
 layout {
-    gaps 0
+    gaps 16
     struts {
         left 0
         right 0
@@ -25,8 +25,8 @@ layout {
         width 2
 
         //active-color "#7fc8ff" /* cyn */
-        //active-color "#7aa2f7" /* blu */
-        active-color "#87afb1" /* fg2 */
+        active-color "#7aa2f7" /* blu */
+        //active-color "#87afb1" /* fg2 */
 
         // Color of the ring on inactive monitors.
         // The focus ring only draws around the active window, so the only place
@@ -53,7 +53,8 @@ layout {
         on
         width 2
         
-        active-color "#87afb1"
+        //active-color "#87afb1"
+        active-color "#7aa2f7"
         inactive-color "transparent"
 
         urgent-color "#9b0000"

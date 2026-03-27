@@ -4,7 +4,7 @@ hotkey-overlay {
 
 spawn-at-startup "waybar"
 spawn-sh-at-startup "mako --config ~/.config/mako/config"
-spawn-sh-at-startup "swaybg -i ~/src/nixos/dotfiles/wall/samori04.jpg -m fill"
+spawn-sh-at-startup "swaybg -i ~/src/nixos/dotfiles/wall/lofi01.jpg -m fill"
 
 cursor {
     xcursor-theme "Adwaita"
