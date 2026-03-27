@@ -55,9 +55,14 @@ sh <(wget -qO - https://downloads.nordcdn.com/apps/linux/install.sh) -p nordvpn-
 # Tailscale
 curl -fsSL https://tailscale.com/install.sh | sh
 
+# Packages
 echo -e "\e[1mInstalling packages. ~~>\e[0m"
 
 sudo apt update
-sudo apt install -y 1password brave-browser ghostty /tmp/dropbox.deb ripgrep fastfetch nordvpn spotify-client vlc btop transmission ranger
+sudo apt install -y 1password brave-browser ghostty flatpak gnome-software-plugin-flatpak /tmp/dropbox.deb ripgrep tree starship fastfetch nordvpn spotify-client vlc btop transmission ranger
+
+# Flatpak
+echo -e "\e[1mSetting up Flatpak repository. ~~>\e[0m"
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 echo -e "\e[1mInstallation complete!\e[0m"
