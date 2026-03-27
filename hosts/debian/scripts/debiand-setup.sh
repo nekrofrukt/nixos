@@ -1,11 +1,24 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo -e "\e[1m----------------------------------------------------\e[0m"
-echo -e "\e[1mUpdating package lists and installing base packages.\e[0m"
-echo -e "\e[1m----------------------------------------------------\e[0m"
+echo -e "\e[1m-------------------------\e[0m"
+echo -e "\e[1mDEBIAN BASE SYSTEM SETUP.\e[0m"
+echo -e "\e[1m-------------------------\e[0m"
 
-# BASE TOOLS
+read -p "Start installation? (y/N): " confirm
+[[ "$confirm" != "y" ]] && exit 1
+
+echo -e "\e[1mConfiguring gsettings. ~~>\e[0m"
+
+gsettings set org.gnome.desktop.peripherals.keyboard delay 200
+gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 30
+echo -e "\e[1mKeyboard delay set to '200'.\e[0m"
+echo -e "\e[1mKeyboard repeat-interval set to '30'.\e[0m"
+echo -e "\e[1m---\e[0m"
+
+echo -e "\e[1mInstalling utils. ~~>\e[0m"
+
+# BASE UTILS
 sudo apt update
 sudo apt install -y git curl wget lsb-release
 
